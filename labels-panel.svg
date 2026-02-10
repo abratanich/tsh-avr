@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="210mm" height="297mm" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+  <!-- TSH-AVR Panel Labels — Standard DIN rail marker window sizes -->
+  <!-- 4P device window: ~45 x 8mm | QS window: ~45 x 10mm -->
+  <!-- Print at 100% scale on A4 self-adhesive paper -->
+  <defs>
+    <style>
+      .id { font-family: Arial, sans-serif; font-weight: 800; }
+      .desc { font-family: Arial, sans-serif; font-weight: 600; }
+      .sub { font-family: Arial, sans-serif; font-weight: 400; }
+      .cut { stroke: #bbb; stroke-width: 0.15; stroke-dasharray: 0.8,0.8; fill: none; }
+      .hdr { font-family: Arial, sans-serif; font-weight: 700; font-size: 3.5px; fill: #64748B; }
+      .info { font-family: Arial, sans-serif; font-weight: 400; font-size: 2.5px; fill: #94A3B8; }
+    </style>
+  </defs>
+
+  <!-- Page header -->
+  <text x="105" y="8" text-anchor="middle" font-family="Arial" font-weight="700" font-size="5" fill="#334155">TSH-AVR — НАКЛЕЙКИ ДЛЯ ЩИТА</text>
+  <text x="105" y="12" text-anchor="middle" class="info">Размер под стандартные окошки DIN-модулей (4P = 45x8мм). Печать 100%. Вырезать по пунктиру.</text>
+
+  <!-- ============================================================ -->
+  <!-- АВТОМАТЫ QF1-QF5  |  45 x 8mm each -->
+  <!-- ============================================================ -->
+  <text x="10" y="20" class="hdr">АВТОМАТЫ (QF1—QF5) · 45 x 8 мм</text>
+
+  <!-- QF1 — Выход INV -->
+  <g transform="translate(10, 23)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#5B21B6">QF1</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#5B21B6">Выход INV</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#7C3AED">инвертор → KM_INV</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#7C3AED"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2.2" font-weight="700">INV</text>
+  </g>
+
+  <!-- QF2 — Зарядка АКБ -->
+  <g transform="translate(10, 33)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#ECFDF5" stroke="#059669" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#065F46">QF2</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#065F46">Заряд АКБ</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#059669">ШИНА A → зарядное</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#059669"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="1.8" font-weight="700">BUS A</text>
+  </g>
+
+  <!-- QF3 — Ввод GRID -->
+  <g transform="translate(10, 43)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#EFF6FF" stroke="#2563EB" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#1E40AF">QF3</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#1E40AF">Ввод GRID</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#2563EB">городская сеть 230В</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#2563EB"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GRID</text>
+  </g>
+
+  <!-- QF4 — Ввод GEN -->
+  <g transform="translate(10, 53)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#FFFBEB" stroke="#D97706" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#92400E">QF4</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#92400E">Ввод GEN</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#D97706">генератор 230В</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#D97706"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GEN</text>
+  </g>
+
+  <!-- QF5 — Выход LOAD -->
+  <g transform="translate(10, 63)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#991B1B">QF5</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#991B1B">Выход LOAD</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#DC2626">питание дома</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#DC2626"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">LOAD</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- КОНТАКТОРЫ KM  |  45 x 8mm each -->
+  <!-- ============================================================ -->
+  <text x="10" y="78" class="hdr">КОНТАКТОРЫ (KM) · 45 x 8 мм</text>
+
+  <!-- KM_GRID -->
+  <g transform="translate(10, 81)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#DBEAFE" stroke="#2563EB" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#1E40AF">KM_GRID</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#2563EB">CH1 GPIO1 · Ступ.1</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#2563EB"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GRID</text>
+  </g>
+
+  <!-- KM_GEN -->
+  <g transform="translate(10, 91)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#FFFBEB" stroke="#D97706" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#92400E">KM_GEN</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#D97706">CH3 GPIO41 · Ступ.1</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#D97706"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GEN</text>
+  </g>
+
+  <!-- KM_INV -->
+  <g transform="translate(10, 101)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#5B21B6">KM_INV</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#7C3AED">CH2 GPIO2 · Ступ.2</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#7C3AED"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">INV</text>
+  </g>
+
+  <!-- KM_TIRE_A -->
+  <g transform="translate(10, 111)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#ECFDF5" stroke="#059669" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#065F46">KM_TIRE_A</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#059669">CH6 GPIO46 · Ступ.2</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#059669"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="1.8" font-weight="700">BUS A</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- QS ПЕРЕКЛЮЧАТЕЛИ  |  45 x 10mm each -->
+  <!-- ============================================================ -->
+  <text x="10" y="127" class="hdr">ПЕРЕКЛЮЧАТЕЛИ БАЙПАС (QS) · 45 x 10 мм</text>
+
+  <!-- QS1 — INV / ШИНА A -->
+  <g transform="translate(10, 130)">
+    <rect x="0" y="0" width="45" height="10" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="9.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.4"/>
+    <text x="2" y="3.5" class="id" font-size="3.2" fill="#991B1B">QS1</text>
+    <text x="12" y="3.5" class="desc" font-size="2.2" fill="#991B1B">Байпас Ступ.2</text>
+    <!-- Position badges -->
+    <rect x="2" y="5" width="12" height="3.5" rx="0.5" fill="#7C3AED"/>
+    <text x="8" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">↑ INV</text>
+    <rect x="15.5" y="5" width="6" height="3.5" rx="0.5" fill="#94A3B8"/>
+    <text x="18.5" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">0</text>
+    <rect x="23" y="5" width="14" height="3.5" rx="0.5" fill="#B45309"/>
+    <text x="30" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="1.8" font-weight="700">↓ ШИНА A</text>
+  </g>
+
+  <!-- QS2 — GRID / GEN -->
+  <g transform="translate(10, 142)">
+    <rect x="0" y="0" width="45" height="10" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="9.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.4"/>
+    <text x="2" y="3.5" class="id" font-size="3.2" fill="#991B1B">QS2</text>
+    <text x="12" y="3.5" class="desc" font-size="2.2" fill="#991B1B">Байпас Ступ.1</text>
+    <!-- Position badges -->
+    <rect x="2" y="5" width="12" height="3.5" rx="0.5" fill="#2563EB"/>
+    <text x="8" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">↑ GRID</text>
+    <rect x="15.5" y="5" width="6" height="3.5" rx="0.5" fill="#94A3B8"/>
+    <text x="18.5" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">0</text>
+    <rect x="23" y="5" width="12" height="3.5" rx="0.5" fill="#D97706"/>
+    <text x="29" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">↓ GEN</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ШИНА A + ESP32  |  special sizes -->
+  <!-- ============================================================ -->
+  <text x="10" y="160" class="hdr">ШИНЫ + КОНТРОЛЛЕР</text>
+
+  <!-- ШИНА A — 50 x 8mm -->
+  <g transform="translate(10, 163)">
+    <rect x="0" y="0" width="50" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="49.4" height="7.4" rx="0.3" fill="#FEF3C7" stroke="#B45309" stroke-width="0.4"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#78350F">ШИНА A</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#92400E">объединённый выход Ступ.1</text>
+    <rect x="38" y="1.5" width="10" height="5" rx="0.8" fill="#B45309"/>
+    <text x="43" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">BUS A</text>
+  </g>
+
+  <!-- ВЫХОДНАЯ ШИНА (LOAD) — 50 x 8mm -->
+  <g transform="translate(10, 173)">
+    <rect x="0" y="0" width="50" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="49.4" height="7.4" rx="0.3" fill="#EFF6FF" stroke="#2563EB" stroke-width="0.4"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#1E40AF">ВЫХОД</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#2563EB">выходная шина → потребители</text>
+    <rect x="38" y="1.5" width="10" height="5" rx="0.8" fill="#DC2626"/>
+    <text x="43" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">LOAD</text>
+  </g>
+
+  <!-- ESP32-S3 — 50 x 8mm -->
+  <g transform="translate(10, 183)">
+    <rect x="0" y="0" width="50" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="49.4" height="7.4" rx="0.3" fill="#0F172A" stroke="#334155" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#93C5FD">ESP32-S3</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#64748B">Waveshare 6CH · ESPHome</text>
+    <rect x="38" y="1.5" width="10" height="5" rx="0.8" fill="#1E3A5F"/>
+    <text x="43" y="4.8" text-anchor="middle" fill="#60A5FA" font-family="Arial" font-size="2" font-weight="700">TSH-AVR</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ПРЕДУПРЕЖДЕНИЕ — 50 x 10mm -->
+  <!-- ============================================================ -->
+  <text x="10" y="199" class="hdr">ПРЕДУПРЕЖДЕНИЕ</text>
+
+  <g transform="translate(10, 202)">
+    <rect x="0" y="0" width="50" height="10" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="49.4" height="9.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.5"/>
+    <text x="25" y="4" text-anchor="middle" class="id" font-size="3" fill="#DC2626">⚠️ ВНИМАНИЕ</text>
+    <text x="25" y="7" text-anchor="middle" class="desc" font-size="2.2" fill="#991B1B">QS переключать ТОЛЬКО при</text>
+    <text x="25" y="9.5" text-anchor="middle" class="desc" font-size="2.2" fill="#991B1B">ВЫКЛЮЧЕННОМ контроллере!</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ЗАПАСНОЙ КОМПЛЕКТ (2-й экземпляр) -->
+  <!-- ============================================================ -->
+  <text x="80" y="20" class="hdr">ЗАПАСНОЙ КОМПЛЕКТ — АВТОМАТЫ</text>
+
+  <!-- QF1 dup -->
+  <g transform="translate(80, 23)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#5B21B6">QF1</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#5B21B6">Выход INV</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#7C3AED">инвертор → KM_INV</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#7C3AED"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2.2" font-weight="700">INV</text>
+  </g>
+
+  <!-- QF2 dup -->
+  <g transform="translate(80, 33)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#ECFDF5" stroke="#059669" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#065F46">QF2</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#065F46">Заряд АКБ</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#059669">ШИНА A → зарядное</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#059669"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="1.8" font-weight="700">BUS A</text>
+  </g>
+
+  <!-- QF3 dup -->
+  <g transform="translate(80, 43)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#EFF6FF" stroke="#2563EB" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#1E40AF">QF3</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#1E40AF">Ввод GRID</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#2563EB">городская сеть 230В</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#2563EB"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GRID</text>
+  </g>
+
+  <!-- QF4 dup -->
+  <g transform="translate(80, 53)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#FFFBEB" stroke="#D97706" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#92400E">QF4</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#92400E">Ввод GEN</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#D97706">генератор 230В</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#D97706"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GEN</text>
+  </g>
+
+  <!-- QF5 dup -->
+  <g transform="translate(80, 63)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#991B1B">QF5</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#991B1B">Выход LOAD</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#DC2626">питание дома</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#DC2626"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">LOAD</text>
+  </g>
+
+  <!-- ЗАПАСНОЙ КОМПЛЕКТ — КОНТАКТОРЫ -->
+  <text x="80" y="78" class="hdr">ЗАПАСНОЙ КОМПЛЕКТ — КОНТАКТОРЫ</text>
+
+  <!-- KM_GRID dup -->
+  <g transform="translate(80, 81)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#DBEAFE" stroke="#2563EB" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#1E40AF">KM_GRID</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#2563EB">CH1 GPIO1 · Ступ.1</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#2563EB"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GRID</text>
+  </g>
+
+  <!-- KM_GEN dup -->
+  <g transform="translate(80, 91)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#FFFBEB" stroke="#D97706" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#92400E">KM_GEN</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#D97706">CH3 GPIO41 · Ступ.1</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#D97706"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GEN</text>
+  </g>
+
+  <!-- KM_INV dup -->
+  <g transform="translate(80, 101)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#5B21B6">KM_INV</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#7C3AED">CH2 GPIO2 · Ступ.2</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#7C3AED"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">INV</text>
+  </g>
+
+  <!-- KM_TIRE_A dup -->
+  <g transform="translate(80, 111)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#ECFDF5" stroke="#059669" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#065F46">KM_TIRE_A</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#059669">CH6 GPIO46 · Ступ.2</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#059669"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="1.8" font-weight="700">BUS A</text>
+  </g>
+
+  <!-- ЗАПАСНОЙ — QS -->
+  <text x="80" y="127" class="hdr">ЗАПАСНОЙ КОМПЛЕКТ — QS</text>
+
+  <!-- QS1 dup -->
+  <g transform="translate(80, 130)">
+    <rect x="0" y="0" width="45" height="10" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="9.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.4"/>
+    <text x="2" y="3.5" class="id" font-size="3.2" fill="#991B1B">QS1</text>
+    <text x="12" y="3.5" class="desc" font-size="2.2" fill="#991B1B">Байпас Ступ.2</text>
+    <rect x="2" y="5" width="12" height="3.5" rx="0.5" fill="#7C3AED"/>
+    <text x="8" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">↑ INV</text>
+    <rect x="15.5" y="5" width="6" height="3.5" rx="0.5" fill="#94A3B8"/>
+    <text x="18.5" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">0</text>
+    <rect x="23" y="5" width="14" height="3.5" rx="0.5" fill="#B45309"/>
+    <text x="30" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="1.8" font-weight="700">↓ ШИНА A</text>
+  </g>
+
+  <!-- QS2 dup -->
+  <g transform="translate(80, 142)">
+    <rect x="0" y="0" width="45" height="10" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="9.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.4"/>
+    <text x="2" y="3.5" class="id" font-size="3.2" fill="#991B1B">QS2</text>
+    <text x="12" y="3.5" class="desc" font-size="2.2" fill="#991B1B">Байпас Ступ.1</text>
+    <rect x="2" y="5" width="12" height="3.5" rx="0.5" fill="#2563EB"/>
+    <text x="8" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">↑ GRID</text>
+    <rect x="15.5" y="5" width="6" height="3.5" rx="0.5" fill="#94A3B8"/>
+    <text x="18.5" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">0</text>
+    <rect x="23" y="5" width="12" height="3.5" rx="0.5" fill="#D97706"/>
+    <text x="29" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">↓ GEN</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="105" y="294" text-anchor="middle" class="info">TSH-AVR · github.com/abratanich/tsh-avr · Печать 100% масштаб на самоклеящейся A4</text>
+</svg>
