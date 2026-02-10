@@ -1,0 +1,591 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1205" width="100%" style="background:#FAFBFC;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3.5 L0,7z" fill="#2563EB"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3.5 L0,7z" fill="#D97706"/></marker>
+    <marker id="arrow-purple" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3.5 L0,7z" fill="#7C3AED"/></marker>
+    <marker id="arrow-yellow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3.5 L0,7z" fill="#B45309"/></marker>
+    <marker id="arrow-green" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3.5 L0,7z" fill="#059669"/></marker>
+    <marker id="arrow-red" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3.5 L0,7z" fill="#DC2626"/></marker>
+
+    <symbol id="interlock" viewBox="0 0 40 50">
+      <line x1="5" y1="5" x2="35" y2="45" stroke="#DC2626" stroke-width="2.5"/>
+      <line x1="35" y1="5" x2="5" y2="45" stroke="#DC2626" stroke-width="2.5"/>
+      <circle cx="20" cy="25" r="16" fill="none" stroke="#DC2626" stroke-width="2" stroke-dasharray="3,2"/>
+    </symbol>
+
+    <symbol id="breaker" viewBox="0 0 30 20">
+      <rect x="1" y="1" width="28" height="18" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.5"/>
+      <line x1="8" y1="15" x2="22" y2="5" stroke="#334155" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+    <filter id="shadow-sm" x="-3%" y="-3%" width="108%" height="108%">
+      <feDropShadow dx="0.5" dy="1" stdDeviation="1.5" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- HEADER -->
+  <!-- ============================================================ -->
+  <rect x="0" y="0" width="1600" height="56" fill="#1E293B"/>
+  <text x="24" y="36" fill="#F8FAFC" font-size="20" font-weight="700" letter-spacing="1">ПРИНЦИПИАЛЬНАЯ СХЕМА АВР — TSH v2.0</text>
+  <text x="1576" y="36" fill="#94A3B8" font-size="13" text-anchor="end">ESP32-S3 (Waveshare 6CH Relay) · ESPHome · LVGL · Home Assistant</text>
+  <text x="1576" y="20" fill="#64748B" font-size="11" text-anchor="end">j.korvin · 2026</text>
+
+  <!-- ============================================================ -->
+  <!-- MAIN POWER FLOW AREA -->
+  <!-- ============================================================ -->
+  <rect x="12" y="66" width="1080" height="555" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="30" y="90" fill="#475569" font-size="13" font-weight="600" letter-spacing="1.5">СИЛОВАЯ ЧАСТЬ</text>
+  <text x="195" y="90" fill="#94A3B8" font-size="11">(4P: 3Ф+N, показана одна фаза)</text>
+
+  <!-- ===================== SOURCES ===================== -->
+
+  <!-- GRID -->
+  <rect x="32" y="140" width="120" height="70" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" filter="url(#shadow-sm)"/>
+  <text x="92" y="167" text-anchor="middle" fill="#2563EB" font-size="20">⚡</text>
+  <text x="92" y="186" text-anchor="middle" fill="#1E40AF" font-size="14" font-weight="700">GRID</text>
+  <text x="92" y="200" text-anchor="middle" fill="#64748B" font-size="9">230В город</text>
+  <text x="92" y="222" text-anchor="middle" fill="#3B82F6" font-size="8">GRID_OK · GPIO10</text>
+
+  <!-- GEN -->
+  <rect x="32" y="300" width="120" height="70" rx="10" fill="#FFFBEB" stroke="#D97706" stroke-width="2" filter="url(#shadow-sm)"/>
+  <text x="92" y="327" text-anchor="middle" fill="#D97706" font-size="20">⚙️</text>
+  <text x="92" y="346" text-anchor="middle" fill="#92400E" font-size="14" font-weight="700">GEN</text>
+  <text x="92" y="360" text-anchor="middle" fill="#64748B" font-size="9">230В генератор</text>
+  <text x="92" y="382" text-anchor="middle" fill="#D97706" font-size="8">GEN_OK · GPIO11</text>
+
+  <!-- INV -->
+  <rect x="32" y="460" width="120" height="70" rx="10" fill="#F5F3FF" stroke="#7C3AED" stroke-width="2" filter="url(#shadow-sm)"/>
+  <text x="92" y="487" text-anchor="middle" fill="#7C3AED" font-size="20">🔋</text>
+  <text x="92" y="506" text-anchor="middle" fill="#5B21B6" font-size="14" font-weight="700">INV</text>
+  <text x="92" y="520" text-anchor="middle" fill="#64748B" font-size="9">230В инвертор</text>
+  <text x="92" y="542" text-anchor="middle" fill="#7C3AED" font-size="8">INV_OK · GPIO12</text>
+
+  <!-- ===================== BREAKERS ===================== -->
+  <use href="#breaker" x="178" y="165" width="30" height="20"/>
+  <text x="193" y="198" text-anchor="middle" fill="#475569" font-size="9" font-weight="600">QF3</text>
+
+  <use href="#breaker" x="178" y="323" width="30" height="20"/>
+  <text x="193" y="356" text-anchor="middle" fill="#475569" font-size="9" font-weight="600">QF4</text>
+
+  <!-- Source → Breaker lines -->
+  <line x1="152" y1="175" x2="178" y2="175" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <line x1="152" y1="335" x2="178" y2="335" stroke="#D97706" stroke-width="2.5"/>
+
+  <!-- ===================== PAIR 1: GRID ↔ GEN ===================== -->
+  <rect x="280" y="110" width="255" height="280" rx="10" fill="#FFF7ED" stroke="#FB923C" stroke-width="1.5" stroke-dasharray="6,3" filter="url(#shadow-sm)"/>
+  <text x="408" y="134" text-anchor="middle" fill="#9A3412" font-size="12" font-weight="700">СТУПЕНЬ 1: ГОРОД ↔ ГЕНЕРАТОР</text>
+
+  <!-- KM_GRID -->
+  <rect x="310" y="152" width="120" height="55" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="370" y="173" text-anchor="middle" fill="#1E40AF" font-size="13" font-weight="700">KM_GRID</text>
+  <text x="370" y="192" text-anchor="middle" fill="#64748B" font-size="10">relay1 · GPIO1</text>
+
+  <!-- KM_GEN -->
+  <rect x="310" y="303" width="120" height="55" rx="8" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="370" y="324" text-anchor="middle" fill="#92400E" font-size="13" font-weight="700">KM_GEN</text>
+  <text x="370" y="343" text-anchor="middle" fill="#64748B" font-size="10">relay3 · GPIO41</text>
+
+  <!-- Interlock pair 1 -->
+  <use href="#interlock" x="350" y="216" width="40" height="78"/>
+  <text x="408" y="260" fill="#DC2626" font-size="10" font-weight="600">250мс</text>
+
+  <!-- Breaker → Contactor lines -->
+  <line x1="208" y1="175" x2="310" y2="175" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <line x1="208" y1="333" x2="310" y2="333" stroke="#D97706" stroke-width="2.5" marker-end="url(#arrow-amber)"/>
+
+  <!-- Contactor outputs merge -->
+  <line x1="430" y1="180" x2="470" y2="180" stroke="#2563EB" stroke-width="2"/>
+  <line x1="470" y1="180" x2="470" y2="220" stroke="#2563EB" stroke-width="2"/>
+  <line x1="430" y1="330" x2="470" y2="330" stroke="#D97706" stroke-width="2"/>
+  <line x1="470" y1="330" x2="470" y2="268" stroke="#D97706" stroke-width="2"/>
+
+  <!-- QS1 bypass (Pair 1: GRID ↔ GEN) -->
+  <rect x="448" y="222" width="48" height="42" rx="5" fill="#FEF2F2" stroke="#F87171" stroke-width="1.5"/>
+  <text x="472" y="240" text-anchor="middle" fill="#991B1B" font-size="10" font-weight="700">QS1</text>
+  <text x="472" y="255" text-anchor="middle" fill="#B91C1C" font-size="8">1-0-2</text>
+
+  <!-- ===================== BUS A ===================== -->
+  <line x1="496" y1="244" x2="555" y2="244" stroke="#B45309" stroke-width="3" marker-end="url(#arrow-yellow)"/>
+
+  <rect x="555" y="222" width="100" height="44" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5" filter="url(#shadow-sm)"/>
+  <text x="605" y="243" text-anchor="middle" fill="#78350F" font-size="13" font-weight="800">ШИНА A</text>
+  <text x="605" y="258" text-anchor="middle" fill="#92400E" font-size="9">объединённый выход</text>
+
+  <!-- ===================== PAIR 2: BUS A ↔ INV ===================== -->
+  <!-- Same structure as Pair 1: two contactors, interlock, bypass -->
+  <rect x="680" y="110" width="255" height="280" rx="10" fill="#F5F3FF" stroke="#A78BFA" stroke-width="1.5" stroke-dasharray="6,3" filter="url(#shadow-sm)"/>
+  <text x="808" y="134" text-anchor="middle" fill="#5B21B6" font-size="12" font-weight="700">СТУПЕНЬ 2: ШИНА A ↔ ИНВЕРТОР</text>
+
+  <!-- KM_CHARGE (from BUS A — top, like KM_GRID in pair 1) -->
+  <rect x="710" y="152" width="130" height="55" rx="8" fill="#D1FAE5" stroke="#059669" stroke-width="2"/>
+  <text x="775" y="173" text-anchor="middle" fill="#065F46" font-size="13" font-weight="700">KM_CHARGE</text>
+  <text x="775" y="192" text-anchor="middle" fill="#64748B" font-size="10">relay6 · GPIO46</text>
+
+  <!-- KM_INV (from INV — bottom, like KM_GEN in pair 1) -->
+  <rect x="710" y="303" width="130" height="55" rx="8" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"/>
+  <text x="775" y="324" text-anchor="middle" fill="#5B21B6" font-size="13" font-weight="700">KM_INV</text>
+  <text x="775" y="343" text-anchor="middle" fill="#64748B" font-size="10">relay2 · GPIO2</text>
+
+  <!-- Interlock pair 2 -->
+  <use href="#interlock" x="755" y="216" width="40" height="78"/>
+  <text x="815" y="260" fill="#DC2626" font-size="10" font-weight="600">250мс</text>
+
+  <!-- BUS A → KM_CHARGE -->
+  <line x1="655" y1="244" x2="680" y2="244" stroke="#B45309" stroke-width="2.5"/>
+  <line x1="680" y1="244" x2="680" y2="180" stroke="#059669" stroke-width="2"/>
+  <line x1="680" y1="180" x2="710" y2="180" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+
+  <!-- INV → QF3 → KM_INV -->
+  <line x1="152" y1="495" x2="178" y2="495" stroke="#7C3AED" stroke-width="2.5"/>
+  <use href="#breaker" x="178" y="485" width="30" height="20"/>
+  <text x="193" y="518" text-anchor="middle" fill="#475569" font-size="9" font-weight="600">QF1</text>
+  <line x1="208" y1="495" x2="270" y2="495" stroke="#7C3AED" stroke-width="2.5"/>
+  <line x1="270" y1="495" x2="270" y2="410" stroke="#7C3AED" stroke-width="2"/>
+  <line x1="270" y1="410" x2="680" y2="410" stroke="#7C3AED" stroke-width="2"/>
+  <line x1="680" y1="410" x2="680" y2="330" stroke="#7C3AED" stroke-width="2"/>
+  <line x1="680" y1="330" x2="710" y2="330" stroke="#7C3AED" stroke-width="2.5" marker-end="url(#arrow-purple)"/>
+
+  <!-- Contactor outputs merge (same pattern as pair 1) -->
+  <line x1="840" y1="180" x2="875" y2="180" stroke="#059669" stroke-width="2"/>
+  <line x1="875" y1="180" x2="875" y2="220" stroke="#059669" stroke-width="2"/>
+  <line x1="840" y1="330" x2="875" y2="330" stroke="#7C3AED" stroke-width="2"/>
+  <line x1="875" y1="330" x2="875" y2="268" stroke="#7C3AED" stroke-width="2"/>
+
+  <!-- QS2 bypass (Pair 2: ШИНА A ↔ INV) -->
+  <rect x="853" y="222" width="48" height="42" rx="5" fill="#FEF2F2" stroke="#F87171" stroke-width="1.5"/>
+  <text x="877" y="240" text-anchor="middle" fill="#991B1B" font-size="10" font-weight="700">QS2</text>
+  <text x="877" y="255" text-anchor="middle" fill="#B91C1C" font-size="8">1-0-2</text>
+
+  <!-- Merge → QF5 -->
+  <line x1="901" y1="244" x2="945" y2="244" stroke="#DC2626" stroke-width="2.5"/>
+
+  <!-- QF5 -->
+  <use href="#breaker" x="945" y="234" width="30" height="20"/>
+  <text x="960" y="268" text-anchor="middle" fill="#475569" font-size="9" font-weight="600">QF5</text>
+
+  <!-- QF5 → LOAD -->
+  <line x1="975" y1="244" x2="1000" y2="244" stroke="#DC2626" stroke-width="3" marker-end="url(#arrow-red)"/>
+
+  <!-- ===================== LOAD ===================== -->
+  <rect x="1000" y="205" width="80" height="80" rx="12" fill="#FEF2F2" stroke="#DC2626" stroke-width="2.5" filter="url(#shadow-sm)"/>
+  <text x="1040" y="237" text-anchor="middle" fill="#DC2626" font-size="26">🏠</text>
+  <text x="1040" y="258" text-anchor="middle" fill="#991B1B" font-size="12" font-weight="700">LOAD</text>
+  <text x="1040" y="274" text-anchor="middle" fill="#64748B" font-size="9">Нагрузка / Дом</text>
+  <text x="1040" y="300" text-anchor="middle" fill="#64748B" font-size="8">LOAD_OK · GPIO9</text>
+
+  <!-- ===================== CHARGER branch (from ШИНА A — input side of KM_CHARGE) ===================== -->
+  <!-- Charger taps from BUS A directly, NOT from KM_CHARGE output -->
+  <!-- This ensures: GRID/GEN mode → BUS A powered → charger ON; INV mode → BUS A dead → charger OFF -->
+  <line x1="590" y1="266" x2="590" y2="370" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="590" y1="370" x2="630" y2="370" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-green)"/>
+
+  <use href="#breaker" x="632" y="362" width="24" height="16"/>
+  <text x="644" y="390" text-anchor="middle" fill="#475569" font-size="8" font-weight="600">QF2</text>
+
+  <rect x="660" y="356" width="72" height="30" rx="5" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="696" y="369" text-anchor="middle" fill="#065F46" font-size="9" font-weight="600">Зарядка</text>
+  <text x="696" y="381" text-anchor="middle" fill="#059669" font-size="8" font-weight="600">АКБ INV 🔋</text>
+
+  <!-- ===================== ACTIVE PATH TABLE ===================== -->
+  <rect x="30" y="405" width="235" height="200" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="148" y="427" text-anchor="middle" fill="#334155" font-size="11" font-weight="700">КАКИЕ РЕЛЕ АКТИВНЫ</text>
+
+  <!-- Table header -->
+  <rect x="35" y="434" width="224" height="20" rx="3" fill="#E2E8F0"/>
+  <text x="72" y="448" text-anchor="middle" fill="#475569" font-size="9" font-weight="600">Источник</text>
+  <text x="118" y="448" text-anchor="middle" fill="#475569" font-size="8" font-weight="600">R1</text>
+  <text x="148" y="448" text-anchor="middle" fill="#475569" font-size="8" font-weight="600">R2</text>
+  <text x="178" y="448" text-anchor="middle" fill="#475569" font-size="8" font-weight="600">R3</text>
+  <text x="208" y="448" text-anchor="middle" fill="#475569" font-size="8" font-weight="600">R6</text>
+  <text x="242" y="448" text-anchor="middle" fill="#475569" font-size="8">Путь</text>
+
+  <!-- GRID row -->
+  <rect x="35" y="456" width="224" height="20" fill="#EFF6FF"/>
+  <text x="72" y="470" text-anchor="middle" fill="#2563EB" font-size="10" font-weight="700">GRID</text>
+  <circle cx="118" cy="466" r="5" fill="#22C55E"/><circle cx="148" cy="466" r="5" fill="#E2E8F0" stroke="#CBD5E1"/>
+  <circle cx="178" cy="466" r="5" fill="#E2E8F0" stroke="#CBD5E1"/><circle cx="208" cy="466" r="5" fill="#22C55E"/>
+  <text x="242" y="470" text-anchor="middle" fill="#64748B" font-size="8">G→A→L</text>
+
+  <!-- INV row -->
+  <rect x="35" y="478" width="224" height="20" fill="#F5F3FF"/>
+  <text x="72" y="492" text-anchor="middle" fill="#7C3AED" font-size="10" font-weight="700">INV</text>
+  <circle cx="118" cy="488" r="5" fill="#E2E8F0" stroke="#CBD5E1"/><circle cx="148" cy="488" r="5" fill="#22C55E"/>
+  <circle cx="178" cy="488" r="5" fill="#E2E8F0" stroke="#CBD5E1"/><circle cx="208" cy="488" r="5" fill="#E2E8F0" stroke="#CBD5E1"/>
+  <text x="242" y="492" text-anchor="middle" fill="#64748B" font-size="8">I→L</text>
+
+  <!-- GEN row -->
+  <rect x="35" y="500" width="224" height="20" fill="#FFFBEB"/>
+  <text x="72" y="514" text-anchor="middle" fill="#D97706" font-size="10" font-weight="700">GEN</text>
+  <circle cx="118" cy="510" r="5" fill="#E2E8F0" stroke="#CBD5E1"/><circle cx="148" cy="510" r="5" fill="#E2E8F0" stroke="#CBD5E1"/>
+  <circle cx="178" cy="510" r="5" fill="#22C55E"/><circle cx="208" cy="510" r="5" fill="#22C55E"/>
+  <text x="242" y="514" text-anchor="middle" fill="#64748B" font-size="8">G→A→L</text>
+
+  <!-- OFF row -->
+  <rect x="35" y="522" width="224" height="20" fill="#F1F5F9"/>
+  <text x="72" y="536" text-anchor="middle" fill="#64748B" font-size="10" font-weight="700">OFF</text>
+  <circle cx="118" cy="532" r="5" fill="#E2E8F0" stroke="#CBD5E1"/><circle cx="148" cy="532" r="5" fill="#E2E8F0" stroke="#CBD5E1"/>
+  <circle cx="178" cy="532" r="5" fill="#E2E8F0" stroke="#CBD5E1"/><circle cx="208" cy="532" r="5" fill="#E2E8F0" stroke="#CBD5E1"/>
+  <text x="242" y="536" text-anchor="middle" fill="#64748B" font-size="8">—</text>
+
+  <!-- Legend -->
+  <circle cx="45" cy="556" r="4" fill="#22C55E"/>
+  <text x="55" y="560" fill="#64748B" font-size="8">ON</text>
+  <circle cx="82" cy="556" r="4" fill="#E2E8F0" stroke="#CBD5E1"/>
+  <text x="92" y="560" fill="#64748B" font-size="8">OFF</text>
+  <text x="40" y="576" fill="#94A3B8" font-size="8">R1=KM_GRID  R2=KM_INV</text>
+  <text x="40" y="588" fill="#94A3B8" font-size="8">R3=KM_GEN   R6=KM_CHARGE</text>
+
+  <!-- Bypass note -->
+  <rect x="30" y="595" width="235" height="14" rx="3" fill="#FEF2F2" stroke="#FECACA" stroke-width="1"/>
+  <text x="148" y="606" text-anchor="middle" fill="#991B1B" font-size="8" font-weight="600">⚠️ QS: НИКОГДА при работающих контакторах!</text>
+
+  <!-- ============================================================ -->
+  <!-- CONTROLLER PANEL -->
+  <!-- ============================================================ -->
+  <rect x="1100" y="66" width="488" height="300" rx="12" fill="#1E293B" filter="url(#shadow)"/>
+  <text x="1120" y="92" fill="#F8FAFC" font-size="14" font-weight="700">WAVESHARE ESP32-S3-Relay-6CH</text>
+  <text x="1120" y="110" fill="#64748B" font-size="10">ESPHome + LVGL + WiFi + HA API</text>
+
+  <!-- Outputs -->
+  <text x="1120" y="136" fill="#F59E0B" font-size="11" font-weight="700">ВЫХОДЫ (6 реле)</text>
+  <text x="1128" y="155" fill="#93C5FD" font-size="10" font-family="monospace">CH1 GPIO1  → <tspan fill="#93C5FD" font-weight="600" font-family="sans-serif">KM_GRID</tspan></text>
+  <text x="1128" y="172" fill="#C4B5FD" font-size="10" font-family="monospace">CH2 GPIO2  → <tspan fill="#C4B5FD" font-weight="600" font-family="sans-serif">KM_INV</tspan></text>
+  <text x="1128" y="189" fill="#FCD34D" font-size="10" font-family="monospace">CH3 GPIO41 → <tspan fill="#FCD34D" font-weight="600" font-family="sans-serif">KM_GEN</tspan></text>
+  <text x="1128" y="206" fill="#6EE7B7" font-size="10" font-family="monospace">CH4 GPIO42 → <tspan fill="#6EE7B7" font-weight="600" font-family="sans-serif">GEN_START</tspan></text>
+  <text x="1128" y="223" fill="#6EE7B7" font-size="10" font-family="monospace">CH5 GPIO45 → <tspan fill="#6EE7B7" font-weight="600" font-family="sans-serif">GEN_STOP</tspan></text>
+  <text x="1128" y="240" fill="#6EE7B7" font-size="10" font-family="monospace">CH6 GPIO46 → <tspan fill="#6EE7B7" font-weight="600" font-family="sans-serif">KM_CHARGE</tspan></text>
+
+  <line x1="1120" y1="250" x2="1340" y2="250" stroke="#334155" stroke-width="1"/>
+
+  <!-- Inputs -->
+  <text x="1120" y="270" fill="#34D399" font-size="11" font-weight="700">ВХОДЫ (INPUT_PULLUP, inverted)</text>
+  <text x="1128" y="289" fill="#93C5FD" font-size="10" font-family="monospace">GPIO10 ← <tspan font-family="sans-serif">GRID_OK</tspan>      <tspan fill="#475569" font-size="9">500/200</tspan></text>
+  <text x="1128" y="306" fill="#FCD34D" font-size="10" font-family="monospace">GPIO11 ← <tspan font-family="sans-serif">GEN_OK</tspan>       <tspan fill="#475569" font-size="9">1200/1200</tspan></text>
+  <text x="1128" y="323" fill="#C4B5FD" font-size="10" font-family="monospace">GPIO12 ← <tspan font-family="sans-serif">INV_OK</tspan>       <tspan fill="#475569" font-size="9">800/800</tspan></text>
+  <text x="1128" y="340" fill="#F87171" font-size="10" font-family="monospace">GPIO9  ← <tspan font-family="sans-serif">LOAD_OK</tspan>      <tspan fill="#475569" font-size="9">800/800</tspan></text>
+  <text x="1128" y="357" fill="#FB923C" font-size="10" font-family="monospace">GPIO13 ← <tspan font-family="sans-serif">GEN_ALARM</tspan>    <tspan fill="#475569" font-size="9">500/500</tspan></text>
+
+  <!-- Right column -->
+  <line x1="1350" y1="80" x2="1350" y2="360" stroke="#334155" stroke-width="1"/>
+
+  <text x="1370" y="100" fill="#F87171" font-size="11" font-weight="700">БЛОКИРОВКИ</text>
+  <text x="1370" y="118" fill="#CBD5E1" font-size="10">relay1 ⛔ relay3  (250мс)</text>
+  <text x="1370" y="136" fill="#CBD5E1" font-size="10">relay2 ⛔ relay6  (250мс)</text>
+  <text x="1370" y="156" fill="#F87171" font-size="9">>1 ON → ALL OFF немедленно</text>
+
+  <text x="1370" y="182" fill="#A78BFA" font-size="11" font-weight="700">ПЕРИФЕРИЯ</text>
+  <text x="1370" y="200" fill="#CBD5E1" font-size="10">GPIO14 ← ENGINE_RUN 200/800</text>
+  <text x="1370" y="216" fill="#94A3B8" font-size="9">⚠️ через оптопару (~20V AC)</text>
+  <text x="1370" y="236" fill="#CBD5E1" font-size="10">GPIO21 → BUZZER (RTTTL)</text>
+  <text x="1370" y="252" fill="#CBD5E1" font-size="10">GPIO38 → RGB LED (WS2812)</text>
+
+  <text x="1370" y="278" fill="#38BDF8" font-size="11" font-weight="700">ДИСПЛЕЙ</text>
+  <text x="1370" y="296" fill="#CBD5E1" font-size="10">ILI9488 + XPT2046 Touch</text>
+  <text x="1370" y="312" fill="#94A3B8" font-size="9">240×320 @ 90° · LVGL</text>
+  <text x="1370" y="328" fill="#94A3B8" font-size="9">MAIN / GEN / EMERGENCY</text>
+
+  <!-- ============================================================ -->
+  <!-- GENERATOR CONTROL -->
+  <!-- ============================================================ -->
+  <rect x="12" y="632" width="520" height="210" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="30" y="656" fill="#475569" font-size="13" font-weight="600" letter-spacing="1.5">УПРАВЛЕНИЕ ГЕНЕРАТОРОМ</text>
+
+  <!-- ATS Connector -->
+  <rect x="30" y="668" width="175" height="160" rx="8" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+  <text x="118" y="688" text-anchor="middle" fill="#92400E" font-size="11" font-weight="700">ATS РАЗЪЁМ 8-pin</text>
+  <text x="42" y="708" fill="#78350F" font-size="10" font-family="monospace">Pin 1  +12V   <tspan fill="#64748B" font-family="sans-serif" font-size="9">питание</tspan></text>
+  <text x="42" y="726" fill="#78350F" font-size="10" font-family="monospace">Pin 3  GND    <tspan fill="#64748B" font-family="sans-serif" font-size="9">общий минус</tspan></text>
+  <text x="42" y="744" fill="#78350F" font-size="10" font-family="monospace">Pin 4  START  <tspan fill="#059669" font-family="sans-serif" font-size="9">→ relay4</tspan></text>
+  <text x="42" y="762" fill="#78350F" font-size="10" font-family="monospace">Pin 2  STOP   <tspan fill="#059669" font-family="sans-serif" font-size="9">→ relay5</tspan></text>
+  <text x="42" y="780" fill="#78350F" font-size="10" font-family="monospace">Pin 7  ENGINE <tspan fill="#DC2626" font-family="sans-serif" font-size="9">~20V AC!</tspan></text>
+  <rect x="42" y="792" width="152" height="24" rx="4" fill="#FEF2F2" stroke="#FECACA" stroke-width="1"/>
+  <text x="118" y="808" text-anchor="middle" fill="#991B1B" font-size="8" font-weight="600">⚠️ Pin7 → ТОЛЬКО оптопара!</text>
+
+  <!-- Start/Stop -->
+  <rect x="220" y="668" width="296" height="160" rx="8" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
+  <text x="368" y="688" text-anchor="middle" fill="#166534" font-size="11" font-weight="700">ПРОЦЕДУРА ЗАПУСКА / ОСТАНОВА</text>
+
+  <text x="232" y="710" fill="#059669" font-size="10" font-weight="700">▶ СТАРТ</text>
+  <text x="232" y="726" fill="#475569" font-size="9">relay4 ON → ждём ENGINE_RUN (до 3с)</text>
+  <text x="232" y="740" fill="#475569" font-size="9">3 попытки, пауза 5с между ними</text>
+  <text x="232" y="754" fill="#475569" font-size="9">Watchdog: relay4 ON > 4.5с → OFF</text>
+  <text x="232" y="770" fill="#DC2626" font-size="9">3 неудачи → ALARM</text>
+
+  <line x1="228" y1="778" x2="508" y2="778" stroke="#D1D5DB" stroke-width="0.5"/>
+
+  <text x="232" y="796" fill="#DC2626" font-size="10" font-weight="700">■ СТОП</text>
+  <text x="232" y="812" fill="#475569" font-size="9">Нагрузку на GRID/INV/OFF → relay5 ON</text>
+  <text x="232" y="826" fill="#475569" font-size="9">Ждём ENGINE_RUN=OFF (до 90с) + hold 3с</text>
+
+  <!-- ============================================================ -->
+  <!-- MODES -->
+  <!-- ============================================================ -->
+  <rect x="544" y="632" width="545" height="210" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="562" y="656" fill="#475569" font-size="13" font-weight="600" letter-spacing="1.5">РЕЖИМЫ РАБОТЫ</text>
+
+  <!-- AUTO -->
+  <rect x="556" y="668" width="168" height="160" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="640" y="688" text-anchor="middle" fill="#1E40AF" font-size="12" font-weight="700">⚡ AUTO</text>
+  <text x="566" y="706" fill="#2563EB" font-size="10" font-weight="700">GRID → INV → GEN → OFF</text>
+  <text x="566" y="724" fill="#334155" font-size="9">Город пропал:</text>
+  <text x="566" y="738" fill="#64748B" font-size="9"> → INV мгновенно</text>
+  <text x="566" y="752" fill="#64748B" font-size="9"> → Старт GEN, прогрев 25с</text>
+  <text x="566" y="766" fill="#64748B" font-size="9"> → Нагрузка на GEN</text>
+  <text x="566" y="784" fill="#334155" font-size="9">Город вернулся:</text>
+  <text x="566" y="798" fill="#64748B" font-size="9"> → Стаб 45с → GRID</text>
+  <text x="566" y="812" fill="#64748B" font-size="9"> → Hold GEN 60с → стоп</text>
+
+  <!-- MANUAL -->
+  <rect x="736" y="668" width="168" height="160" rx="8" fill="#FFFBEB" stroke="#FCD34D" stroke-width="1.5"/>
+  <text x="820" y="688" text-anchor="middle" fill="#92400E" font-size="12" font-weight="700">🔧 MANUAL</text>
+  <text x="746" y="710" fill="#334155" font-size="9">Тап баннер:</text>
+  <text x="746" y="724" fill="#64748B" font-size="9"> → автовыбор лучшего</text>
+  <text x="746" y="744" fill="#334155" font-size="9">Long press карточка:</text>
+  <text x="746" y="758" fill="#64748B" font-size="9"> → force + sticky</text>
+  <text x="746" y="778" fill="#334155" font-size="9">Город пропал → INV</text>
+  <text x="746" y="796" fill="#334155" font-size="9">Город вернулся:</text>
+  <text x="746" y="810" fill="#64748B" font-size="9"> → возврат через 60с</text>
+
+  <!-- EMERGENCY -->
+  <rect x="916" y="668" width="160" height="160" rx="8" fill="#FEF2F2" stroke="#F87171" stroke-width="2"/>
+  <text x="996" y="688" text-anchor="middle" fill="#991B1B" font-size="12" font-weight="700">🔴 EMERGENCY</text>
+  <text x="926" y="710" fill="#991B1B" font-size="10" font-weight="600">ВСЕ РЕЛЕ OFF</text>
+  <text x="926" y="728" fill="#64748B" font-size="9">Скрипты остановлены</text>
+  <text x="926" y="746" fill="#64748B" font-size="9">Контроллер заблокирован</text>
+  <text x="926" y="770" fill="#334155" font-size="9" font-weight="600">Flash-persistent</text>
+  <text x="926" y="784" fill="#64748B" font-size="9">Переживает reboot</text>
+  <text x="926" y="808" fill="#059669" font-size="9" font-weight="600">UNLOCK кнопка</text>
+  <text x="926" y="822" fill="#64748B" font-size="9">на экране Emergency</text>
+
+  <!-- ============================================================ -->
+  <!-- TIMINGS & PROTECTION — FIXED LAYOUT -->
+  <!-- ============================================================ -->
+  <rect x="1100" y="378" width="488" height="240" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow)"/>
+
+  <!-- TIMINGS column (left half, wider) -->
+  <text x="1118" y="402" fill="#2563EB" font-size="12" font-weight="700">⏱ ТАЙМИНГИ</text>
+
+  <!-- Using tabular layout: label left, value right-aligned at x=1310 -->
+  <text x="1126" y="422" fill="#334155" font-size="10">Прогрев GEN</text>
+  <text x="1310" y="422" fill="#2563EB" font-size="11" font-weight="700" text-anchor="end">25с</text>
+
+  <text x="1126" y="439" fill="#334155" font-size="10">GRID стаб. (restore)</text>
+  <text x="1310" y="439" fill="#2563EB" font-size="11" font-weight="700" text-anchor="end">45с</text>
+
+  <text x="1126" y="456" fill="#334155" font-size="10">Hold GEN после restore</text>
+  <text x="1310" y="456" fill="#2563EB" font-size="11" font-weight="700" text-anchor="end">60с</text>
+
+  <text x="1126" y="473" fill="#334155" font-size="10">Dead time контакторов</text>
+  <text x="1310" y="473" fill="#2563EB" font-size="11" font-weight="700" text-anchor="end">250мс</text>
+
+  <text x="1126" y="490" fill="#334155" font-size="10">Антифлап</text>
+  <text x="1310" y="490" fill="#2563EB" font-size="11" font-weight="700" text-anchor="end">300с / 10мин</text>
+
+  <text x="1126" y="507" fill="#334155" font-size="10">Старт: попытки × таймаут</text>
+  <text x="1310" y="507" fill="#2563EB" font-size="11" font-weight="700" text-anchor="end">3 × 3с</text>
+
+  <text x="1126" y="524" fill="#334155" font-size="10">Стоп: ожидание ENGINE</text>
+  <text x="1310" y="524" fill="#2563EB" font-size="11" font-weight="700" text-anchor="end">до 90с</text>
+
+  <text x="1126" y="541" fill="#334155" font-size="10">Антиспам переключений</text>
+  <text x="1310" y="541" fill="#2563EB" font-size="11" font-weight="700" text-anchor="end">700мс</text>
+
+  <text x="1126" y="558" fill="#334155" font-size="10">MANUAL возврат GRID</text>
+  <text x="1310" y="558" fill="#2563EB" font-size="11" font-weight="700" text-anchor="end">60с</text>
+
+  <text x="1126" y="575" fill="#334155" font-size="10">Cooldown после STOP</text>
+  <text x="1310" y="575" fill="#2563EB" font-size="11" font-weight="700" text-anchor="end">5с</text>
+
+  <text x="1126" y="592" fill="#334155" font-size="10">AUTO periodic retry</text>
+  <text x="1310" y="592" fill="#2563EB" font-size="11" font-weight="700" text-anchor="end">15с</text>
+
+  <!-- Divider between columns -->
+  <line x1="1325" y1="390" x2="1325" y2="612" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- PROTECTION column (right half) -->
+  <text x="1340" y="402" fill="#DC2626" font-size="12" font-weight="700">🛡 ЗАЩИТА (Watchdog)</text>
+
+  <text x="1348" y="422" fill="#334155" font-size="10" font-weight="600">INV missing</text>
+  <text x="1348" y="436" fill="#64748B" font-size="9">INV_OK=OFF → fallback 2с</text>
+
+  <text x="1348" y="456" fill="#334155" font-size="10" font-weight="600">Switching stuck</text>
+  <text x="1348" y="470" fill="#64748B" font-size="9">Переключение >12с → OFF</text>
+
+  <text x="1348" y="490" fill="#334155" font-size="10" font-weight="600">State mismatch</text>
+  <text x="1348" y="504" fill="#64748B" font-size="9">Реле ≠ состояние → fix</text>
+
+  <text x="1348" y="524" fill="#334155" font-size="10" font-weight="600">GEN START stuck</text>
+  <text x="1348" y="538" fill="#64748B" font-size="9">relay4 >4.5с → OFF</text>
+
+  <text x="1348" y="558" fill="#DC2626" font-size="10" font-weight="700">Multi-source safety</text>
+  <text x="1348" y="572" fill="#64748B" font-size="9">>1 контактор → ALL OFF</text>
+
+  <text x="1348" y="592" fill="#334155" font-size="10" font-weight="600">GEN missing / Restore</text>
+  <text x="1348" y="606" fill="#64748B" font-size="9">fallback + retry 15с</text>
+
+  <!-- ============================================================ -->
+  <!-- OPTOCOUPLERS & PSU -->
+  <!-- ============================================================ -->
+  <rect x="1100" y="632" width="488" height="106" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="1118" y="656" fill="#475569" font-size="12" font-weight="600" letter-spacing="1">ОПТОИЗОЛЯТОРЫ И ПИТАНИЕ</text>
+
+  <text x="1118" y="678" fill="#059669" font-size="10" font-weight="700">ОПТОПАРЫ (DIN, 230V AC → 3.3V)</text>
+  <text x="1126" y="694" fill="#64748B" font-size="9">×4: GRID/GEN/INV/LOAD_OK → GPIO</text>
+  <text x="1126" y="710" fill="#64748B" font-size="9">GEN_ALARM — сухой контакт → оптопара → GPIO13</text>
+  <text x="1126" y="726" fill="#DC2626" font-size="9" font-weight="600">ENGINE_RUN — ~20V AC → оптопара → GPIO14</text>
+
+  <line x1="1370" y1="646" x2="1370" y2="732" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="1388" y="678" fill="#7C3AED" font-size="10" font-weight="700">БЛОКИ ПИТАНИЯ (×2 DIN)</text>
+  <text x="1396" y="696" fill="#64748B" font-size="9">БП1: Зарядка АКБ GEN + старт/стоп</text>
+  <text x="1396" y="712" fill="#64748B" font-size="9">БП2: ESP32 + резервная АКБ</text>
+  <text x="1396" y="728" fill="#94A3B8" font-size="8">WNC-3: мониторинг (вне логики)</text>
+
+  <!-- ============================================================ -->
+  <!-- BYPASS / MANUAL MODE -->
+  <!-- ============================================================ -->
+  <rect x="1100" y="748" width="488" height="118" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="1118" y="770" fill="#DC2626" font-size="12" font-weight="700">🔧 БАЙПАС — РУЧНОЙ РЕЖИМ</text>
+  <text x="1576" y="770" text-anchor="end" fill="#991B1B" font-size="9" font-weight="700">⚠️ ВЫКЛЮЧИТЬ КОНТРОЛЛЕР!</text>
+
+  <!-- QS descriptions -->
+  <text x="1118" y="788" fill="#334155" font-size="9">QS1 (Ступ.1): <tspan fill="#2563EB" font-weight="700">↑ GRID</tspan> | 0 | <tspan fill="#D97706" font-weight="700">↓ GEN</tspan></text>
+  <text x="1370" y="788" fill="#334155" font-size="9">QS2 (Ступ.2): <tspan fill="#7C3AED" font-weight="700">↑ INV</tspan> | 0 | <tspan fill="#B45309" font-weight="700">↓ ШИНА A</tspan></text>
+
+  <!-- Table header -->
+  <rect x="1108" y="796" width="472" height="14" rx="2" fill="#E2E8F0"/>
+  <text x="1118" y="806" fill="#475569" font-size="8" font-weight="600">Режим</text>
+  <text x="1250" y="806" fill="#475569" font-size="8" font-weight="600">QS1</text>
+  <text x="1290" y="806" fill="#475569" font-size="8" font-weight="600">QS2</text>
+  <text x="1330" y="806" fill="#475569" font-size="8" font-weight="600">Путь питания</text>
+
+  <!-- Row 1: GRID → дом -->
+  <rect x="1108" y="812" width="472" height="13" fill="#EFF6FF"/>
+  <text x="1118" y="822" fill="#2563EB" font-size="9" font-weight="600">GRID → дом</text>
+  <text x="1256" y="822" fill="#2563EB" font-size="9" font-weight="700">↑</text>
+  <text x="1296" y="822" fill="#B45309" font-size="9" font-weight="700">↓</text>
+  <text x="1330" y="822" fill="#64748B" font-size="8">GRID → ШИНА A → LOAD + заряд INV</text>
+
+  <!-- Row 2: GEN → дом -->
+  <rect x="1108" y="825" width="472" height="13" fill="#FFFBEB"/>
+  <text x="1118" y="835" fill="#D97706" font-size="9" font-weight="600">GEN → дом</text>
+  <text x="1256" y="835" fill="#D97706" font-size="9" font-weight="700">↓</text>
+  <text x="1296" y="835" fill="#B45309" font-size="9" font-weight="700">↓</text>
+  <text x="1330" y="835" fill="#64748B" font-size="8">GEN → ШИНА A → LOAD + заряд INV</text>
+
+  <!-- Row 3: INV + GRID charge -->
+  <rect x="1108" y="838" width="472" height="13" fill="#F5F3FF"/>
+  <text x="1118" y="848" fill="#7C3AED" font-size="9" font-weight="600">INV + город заряд</text>
+  <text x="1256" y="848" fill="#2563EB" font-size="9" font-weight="700">↑</text>
+  <text x="1296" y="848" fill="#7C3AED" font-size="9" font-weight="700">↑</text>
+  <text x="1330" y="848" fill="#64748B" font-size="8">INV → LOAD, GRID → заряд АКБ</text>
+
+  <!-- Row 4: INV + GEN charge -->
+  <rect x="1108" y="851" width="472" height="13" fill="#FFF7ED"/>
+  <text x="1118" y="861" fill="#7C3AED" font-size="9" font-weight="600">INV + ген заряд</text>
+  <text x="1256" y="861" fill="#D97706" font-size="9" font-weight="700">↓</text>
+  <text x="1296" y="861" fill="#7C3AED" font-size="9" font-weight="700">↑</text>
+  <text x="1330" y="861" fill="#64748B" font-size="8">INV → LOAD, GEN → заряд АКБ</text>
+
+  <!-- ============================================================ -->
+  <!-- ENERGY FLOW -->
+  <!-- ============================================================ -->
+  <rect x="12" y="875" width="1576" height="115" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="30" y="899" fill="#475569" font-size="13" font-weight="600" letter-spacing="1.5">ПОТОК ЭНЕРГИИ</text>
+
+  <!-- ===== СТУПЕНЬ 1: GRID + GEN → ШИНА A ===== -->
+  <text x="40" y="918" fill="#9A3412" font-size="9" font-weight="600">СТУПЕНЬ 1</text>
+
+  <!-- GRID (top) -->
+  <text x="40" y="934" fill="#2563EB" font-size="10" font-weight="700">GRID</text>
+  <text x="78" y="934" fill="#475569" font-size="8">QF3</text>
+  <line x1="94" y1="930" x2="108" y2="930" stroke="#2563EB" stroke-width="2"/>
+  <rect x="110" y="921" width="72" height="18" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="146" y="934" text-anchor="middle" fill="#1E40AF" font-size="9" font-weight="700">KM_GRID</text>
+  <line x1="182" y1="930" x2="210" y2="930" stroke="#2563EB" stroke-width="2"/>
+  <line x1="210" y1="930" x2="210" y2="942" stroke="#2563EB" stroke-width="2"/>
+
+  <!-- GEN (bottom) -->
+  <text x="40" y="962" fill="#D97706" font-size="10" font-weight="700">GEN</text>
+  <text x="74" y="962" fill="#475569" font-size="8">QF4</text>
+  <line x1="110" y1="958" x2="118" y2="958" stroke="#D97706" stroke-width="2"/>
+  <rect x="120" y="949" width="64" height="18" rx="4" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+  <text x="152" y="962" text-anchor="middle" fill="#92400E" font-size="9" font-weight="700">KM_GEN</text>
+  <line x1="184" y1="958" x2="210" y2="958" stroke="#D97706" stroke-width="2"/>
+  <line x1="210" y1="958" x2="210" y2="946" stroke="#D97706" stroke-width="2"/>
+
+  <!-- Merge point 1 -->
+  <circle cx="210" cy="944" r="4" fill="#B45309"/>
+
+  <!-- → ШИНА A -->
+  <line x1="214" y1="944" x2="232" y2="944" stroke="#B45309" stroke-width="2.5"/>
+  <rect x="234" y="934" width="62" height="20" rx="4" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+  <text x="265" y="948" text-anchor="middle" fill="#78350F" font-size="9" font-weight="800">ШИНА A</text>
+
+  <!-- Charger branch (down from ШИНА A) -->
+  <line x1="265" y1="954" x2="265" y2="971" stroke="#059669" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="275" y="978" fill="#059669" font-size="8">→ QF2 → зарядка АКБ INV</text>
+
+  <!-- === Arrow to СТУПЕНЬ 2 === -->
+  <line x1="296" y1="944" x2="350" y2="944" stroke="#B45309" stroke-width="2.5"/>
+
+  <!-- ===== СТУПЕНЬ 2: KM_CHARGE + KM_INV → QF5 → LOAD ===== -->
+  <text x="355" y="918" fill="#5B21B6" font-size="9" font-weight="600">СТУПЕНЬ 2</text>
+
+  <!-- KM_CHARGE (top, from ШИНА A) -->
+  <rect x="355" y="921" width="82" height="18" rx="4" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
+  <text x="396" y="934" text-anchor="middle" fill="#065F46" font-size="9" font-weight="700">KM_CHARGE</text>
+  <line x1="437" y1="930" x2="500" y2="930" stroke="#059669" stroke-width="2"/>
+  <line x1="500" y1="930" x2="500" y2="942" stroke="#059669" stroke-width="2"/>
+
+  <!-- KM_INV (bottom, from INV) -->
+  <text x="350" y="962" fill="#7C3AED" font-size="10" font-weight="700">INV</text>
+  <text x="386" y="962" fill="#475569" font-size="8" font-weight="600">QF1</text>
+  <line x1="402" y1="958" x2="428" y2="958" stroke="#7C3AED" stroke-width="2"/>
+  <rect x="430" y="949" width="64" height="18" rx="4" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="462" y="962" text-anchor="middle" fill="#5B21B6" font-size="9" font-weight="700">KM_INV</text>
+  <line x1="494" y1="958" x2="500" y2="958" stroke="#7C3AED" stroke-width="2"/>
+  <line x1="500" y1="958" x2="500" y2="946" stroke="#7C3AED" stroke-width="2"/>
+
+  <!-- Merge point 2 -->
+  <circle cx="500" cy="944" r="4" fill="#DC2626"/>
+
+  <!-- → QF5 → LOAD -->
+  <line x1="504" y1="944" x2="520" y2="944" stroke="#DC2626" stroke-width="2.5"/>
+  <rect x="522" y="934" width="32" height="20" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1"/>
+  <text x="538" y="948" text-anchor="middle" fill="#475569" font-size="8" font-weight="600">QF5</text>
+  <line x1="554" y1="944" x2="572" y2="944" stroke="#DC2626" stroke-width="3"/>
+  <text x="580" y="948" fill="#DC2626" font-size="13" font-weight="700">🏠 LOAD</text>
+
+  <!-- ============================================================ -->
+  <!-- NOTES -->
+  <!-- ============================================================ -->
+  <rect x="12" y="1000" width="1576" height="152" rx="12" fill="#FFFBEB" stroke="#FCD34D" stroke-width="1"/>
+  <text x="30" y="1023" fill="#92400E" font-size="12" font-weight="600" letter-spacing="1.5">ПРИМЕЧАНИЯ</text>
+
+  <text x="30" y="1042" fill="#475569" font-size="10">1. Контакторы: ETI BSC 240 40A 400V (4P) + Hager ESC440/ESC455. QS1, QS2: переключатели 1-0-2 (параллельно контакторам).</text>
+  <text x="30" y="1058" fill="#475569" font-size="10">2. Оптоизоляторы: DIN-модули, 230V AC → 3.3V. ENGINE RUN (~20V AC Pin7) → ТОЛЬКО через оптопару/делитель!</text>
+  <text x="30" y="1074" fill="#475569" font-size="10">3. Общая GND обязательна (ESP32 + генератор). Два PSU на DIN-рейке. WiFi: HA API + OTA. NTP: Europe/Kyiv.</text>
+  <text x="30" y="1090" fill="#475569" font-size="10">4. Flash persistent: g_emergency_off, g_auto_mode, g_last_source, g_last_reason, g_manual_sticky. Sync: 120с.</text>
+  <text x="30" y="1106" fill="#991B1B" font-size="10" font-weight="700">5. БАЙПАС: EMERGENCY OFF → перевести QS → при возврате: QS=0, затем UNLOCK. Никогда не переключать QS при работающих контакторах!</text>
+  <text x="30" y="1122" fill="#475569" font-size="10">6. Система 4P (3 фазы + N). Все автоматы и контакторы — четырёхполюсные. Если INV или GEN однофазный — объединить 3 фазы в одну</text>
+  <text x="37" y="1138" fill="#475569" font-size="10">на его автомате (QF4 для GEN, QF1 для INV). <tspan fill="#991B1B" font-weight="700">⚠️ Убедиться в отсутствии трёхфазных нагрузок (моторы, варочная и т.д.)!</tspan></text>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================================ -->
+  <text x="800" y="1190" text-anchor="middle" fill="#94A3B8" font-size="9">TSH-AVR v2.0 · Waveshare ESP32-S3-Relay-6CH · ESPHome v1.0.30 · j.korvin · 2026</text>
+
+  <!-- ============================================================ -->
+  <!-- QR CODE — links to raw SVG on GitHub -->
+  <!-- ============================================================ -->
+  <g transform="translate(1500, 1155) scale(1.1)">
+    <rect x="-2" y="-2" width="82" height="82" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.8"/>
+    <path fill="#1E293B" d="M2,2h2v2h-2z M4,2h2v2h-2z M6,2h2v2h-2z M8,2h2v2h-2z M10,2h2v2h-2z M12,2h2v2h-2z M14,2h2v2h-2z M18,2h2v2h-2z M28,2h2v2h-2z M34,2h2v2h-2z M40,2h2v2h-2z M42,2h2v2h-2z M46,2h2v2h-2z M50,2h2v2h-2z M62,2h2v2h-2z M64,2h2v2h-2z M66,2h2v2h-2z M68,2h2v2h-2z M70,2h2v2h-2z M72,2h2v2h-2z M74,2h2v2h-2z M2,4h2v2h-2z M14,4h2v2h-2z M18,4h2v2h-2z M22,4h2v2h-2z M24,4h2v2h-2z M28,4h2v2h-2z M36,4h2v2h-2z M40,4h2v2h-2z M44,4h2v2h-2z M46,4h2v2h-2z M52,4h2v2h-2z M54,4h2v2h-2z M58,4h2v2h-2z M62,4h2v2h-2z M74,4h2v2h-2z M2,6h2v2h-2z M6,6h2v2h-2z M8,6h2v2h-2z M10,6h2v2h-2z M14,6h2v2h-2z M18,6h2v2h-2z M20,6h2v2h-2z M28,6h2v2h-2z M32,6h2v2h-2z M34,6h2v2h-2z M40,6h2v2h-2z M44,6h2v2h-2z M46,6h2v2h-2z M48,6h2v2h-2z M50,6h2v2h-2z M52,6h2v2h-2z M62,6h2v2h-2z M66,6h2v2h-2z M68,6h2v2h-2z M70,6h2v2h-2z M74,6h2v2h-2z M2,8h2v2h-2z M6,8h2v2h-2z M8,8h2v2h-2z M10,8h2v2h-2z M14,8h2v2h-2z M22,8h2v2h-2z M30,8h2v2h-2z M34,8h2v2h-2z M36,8h2v2h-2z M42,8h2v2h-2z M44,8h2v2h-2z M50,8h2v2h-2z M52,8h2v2h-2z M56,8h2v2h-2z M58,8h2v2h-2z M62,8h2v2h-2z M66,8h2v2h-2z M68,8h2v2h-2z M70,8h2v2h-2z M74,8h2v2h-2z M2,10h2v2h-2z M6,10h2v2h-2z M8,10h2v2h-2z M10,10h2v2h-2z M14,10h2v2h-2z M18,10h2v2h-2z M26,10h2v2h-2z M28,10h2v2h-2z M38,10h2v2h-2z M40,10h2v2h-2z M42,10h2v2h-2z M46,10h2v2h-2z M58,10h2v2h-2z M62,10h2v2h-2z M66,10h2v2h-2z M68,10h2v2h-2z M70,10h2v2h-2z M74,10h2v2h-2z M2,12h2v2h-2z M14,12h2v2h-2z M26,12h2v2h-2z M28,12h2v2h-2z M42,12h2v2h-2z M48,12h2v2h-2z M52,12h2v2h-2z M58,12h2v2h-2z M62,12h2v2h-2z M74,12h2v2h-2z M2,14h2v2h-2z M4,14h2v2h-2z M6,14h2v2h-2z M8,14h2v2h-2z M10,14h2v2h-2z M12,14h2v2h-2z M14,14h2v2h-2z M18,14h2v2h-2z M22,14h2v2h-2z M26,14h2v2h-2z M30,14h2v2h-2z M34,14h2v2h-2z M38,14h2v2h-2z M42,14h2v2h-2z M46,14h2v2h-2z M50,14h2v2h-2z M54,14h2v2h-2z M58,14h2v2h-2z M62,14h2v2h-2z M64,14h2v2h-2z M66,14h2v2h-2z M68,14h2v2h-2z M70,14h2v2h-2z M72,14h2v2h-2z M74,14h2v2h-2z M20,16h2v2h-2z M22,16h2v2h-2z M30,16h2v2h-2z M34,16h2v2h-2z M36,16h2v2h-2z M38,16h2v2h-2z M40,16h2v2h-2z M46,16h2v2h-2z M48,16h2v2h-2z M52,16h2v2h-2z M58,16h2v2h-2z M2,18h2v2h-2z M8,18h2v2h-2z M10,18h2v2h-2z M12,18h2v2h-2z M14,18h2v2h-2z M16,18h2v2h-2z M18,18h2v2h-2z M20,18h2v2h-2z M24,18h2v2h-2z M48,18h2v2h-2z M50,18h2v2h-2z M54,18h2v2h-2z M56,18h2v2h-2z M58,18h2v2h-2z M60,18h2v2h-2z M66,18h2v2h-2z M70,18h2v2h-2z M72,18h2v2h-2z M74,18h2v2h-2z M2,20h2v2h-2z M4,20h2v2h-2z M8,20h2v2h-2z M10,20h2v2h-2z M12,20h2v2h-2z M16,20h2v2h-2z M22,20h2v2h-2z M34,20h2v2h-2z M38,20h2v2h-2z M48,20h2v2h-2z M54,20h2v2h-2z M56,20h2v2h-2z M58,20h2v2h-2z M60,20h2v2h-2z M64,20h2v2h-2z M66,20h2v2h-2z M68,20h2v2h-2z M72,20h2v2h-2z M4,22h2v2h-2z M8,22h2v2h-2z M10,22h2v2h-2z M12,22h2v2h-2z M14,22h2v2h-2z M18,22h2v2h-2z M26,22h2v2h-2z M28,22h2v2h-2z M32,22h2v2h-2z M34,22h2v2h-2z M36,22h2v2h-2z M38,22h2v2h-2z M40,22h2v2h-2z M42,22h2v2h-2z M44,22h2v2h-2z M46,22h2v2h-2z M48,22h2v2h-2z M56,22h2v2h-2z M60,22h2v2h-2z M62,22h2v2h-2z M70,22h2v2h-2z M74,22h2v2h-2z M2,24h2v2h-2z M8,24h2v2h-2z M12,24h2v2h-2z M18,24h2v2h-2z M22,24h2v2h-2z M28,24h2v2h-2z M30,24h2v2h-2z M34,24h2v2h-2z M36,24h2v2h-2z M40,24h2v2h-2z M42,24h2v2h-2z M46,24h2v2h-2z M48,24h2v2h-2z M50,24h2v2h-2z M54,24h2v2h-2z M56,24h2v2h-2z M60,24h2v2h-2z M64,24h2v2h-2z M68,24h2v2h-2z M70,24h2v2h-2z M72,24h2v2h-2z M74,24h2v2h-2z M2,26h2v2h-2z M6,26h2v2h-2z M8,26h2v2h-2z M10,26h2v2h-2z M12,26h2v2h-2z M14,26h2v2h-2z M24,26h2v2h-2z M26,26h2v2h-2z M28,26h2v2h-2z M32,26h2v2h-2z M34,26h2v2h-2z M42,26h2v2h-2z M50,26h2v2h-2z M62,26h2v2h-2z M74,26h2v2h-2z M2,28h2v2h-2z M10,28h2v2h-2z M16,28h2v2h-2z M18,28h2v2h-2z M20,28h2v2h-2z M28,28h2v2h-2z M32,28h2v2h-2z M34,28h2v2h-2z M38,28h2v2h-2z M48,28h2v2h-2z M52,28h2v2h-2z M54,28h2v2h-2z M56,28h2v2h-2z M58,28h2v2h-2z M66,28h2v2h-2z M68,28h2v2h-2z M4,30h2v2h-2z M6,30h2v2h-2z M8,30h2v2h-2z M10,30h2v2h-2z M12,30h2v2h-2z M14,30h2v2h-2z M18,30h2v2h-2z M20,30h2v2h-2z M22,30h2v2h-2z M24,30h2v2h-2z M30,30h2v2h-2z M32,30h2v2h-2z M34,30h2v2h-2z M38,30h2v2h-2z M40,30h2v2h-2z M42,30h2v2h-2z M56,30h2v2h-2z M62,30h2v2h-2z M66,30h2v2h-2z M68,30h2v2h-2z M70,30h2v2h-2z M74,30h2v2h-2z M2,32h2v2h-2z M4,32h2v2h-2z M6,32h2v2h-2z M8,32h2v2h-2z M16,32h2v2h-2z M20,32h2v2h-2z M24,32h2v2h-2z M26,32h2v2h-2z M32,32h2v2h-2z M40,32h2v2h-2z M46,32h2v2h-2z M48,32h2v2h-2z M50,32h2v2h-2z M58,32h2v2h-2z M64,32h2v2h-2z M68,32h2v2h-2z M70,32h2v2h-2z M74,32h2v2h-2z M2,34h2v2h-2z M4,34h2v2h-2z M6,34h2v2h-2z M8,34h2v2h-2z M10,34h2v2h-2z M12,34h2v2h-2z M14,34h2v2h-2z M16,34h2v2h-2z M18,34h2v2h-2z M20,34h2v2h-2z M22,34h2v2h-2z M24,34h2v2h-2z M28,34h2v2h-2z M36,34h2v2h-2z M38,34h2v2h-2z M40,34h2v2h-2z M42,34h2v2h-2z M48,34h2v2h-2z M50,34h2v2h-2z M52,34h2v2h-2z M60,34h2v2h-2z M62,34h2v2h-2z M64,34h2v2h-2z M70,34h2v2h-2z M72,34h2v2h-2z M2,36h2v2h-2z M4,36h2v2h-2z M16,36h2v2h-2z M18,36h2v2h-2z M24,36h2v2h-2z M26,36h2v2h-2z M28,36h2v2h-2z M36,36h2v2h-2z M56,36h2v2h-2z M60,36h2v2h-2z M64,36h2v2h-2z M68,36h2v2h-2z M70,36h2v2h-2z M2,38h2v2h-2z M4,38h2v2h-2z M6,38h2v2h-2z M8,38h2v2h-2z M14,38h2v2h-2z M16,38h2v2h-2z M18,38h2v2h-2z M22,38h2v2h-2z M28,38h2v2h-2z M30,38h2v2h-2z M34,38h2v2h-2z M38,38h2v2h-2z M40,38h2v2h-2z M44,38h2v2h-2z M48,38h2v2h-2z M50,38h2v2h-2z M54,38h2v2h-2z M56,38h2v2h-2z M60,38h2v2h-2z M62,38h2v2h-2z M66,38h2v2h-2z M68,38h2v2h-2z M70,38h2v2h-2z M74,38h2v2h-2z M6,40h2v2h-2z M8,40h2v2h-2z M16,40h2v2h-2z M20,40h2v2h-2z M28,40h2v2h-2z M30,40h2v2h-2z M32,40h2v2h-2z M34,40h2v2h-2z M38,40h2v2h-2z M46,40h2v2h-2z M52,40h2v2h-2z M54,40h2v2h-2z M60,40h2v2h-2z M62,40h2v2h-2z M64,40h2v2h-2z M66,40h2v2h-2z M68,40h2v2h-2z M74,40h2v2h-2z M2,42h2v2h-2z M4,42h2v2h-2z M8,42h2v2h-2z M10,42h2v2h-2z M12,42h2v2h-2z M14,42h2v2h-2z M20,42h2v2h-2z M28,42h2v2h-2z M30,42h2v2h-2z M34,42h2v2h-2z M36,42h2v2h-2z M40,42h2v2h-2z M50,42h2v2h-2z M54,42h2v2h-2z M58,42h2v2h-2z M60,42h2v2h-2z M62,42h2v2h-2z M64,42h2v2h-2z M66,42h2v2h-2z M2,44h2v2h-2z M4,44h2v2h-2z M6,44h2v2h-2z M10,44h2v2h-2z M16,44h2v2h-2z M18,44h2v2h-2z M22,44h2v2h-2z M32,44h2v2h-2z M36,44h2v2h-2z M40,44h2v2h-2z M46,44h2v2h-2z M48,44h2v2h-2z M52,44h2v2h-2z M56,44h2v2h-2z M60,44h2v2h-2z M66,44h2v2h-2z M70,44h2v2h-2z M2,46h2v2h-2z M4,46h2v2h-2z M6,46h2v2h-2z M8,46h2v2h-2z M14,46h2v2h-2z M16,46h2v2h-2z M32,46h2v2h-2z M34,46h2v2h-2z M48,46h2v2h-2z M50,46h2v2h-2z M54,46h2v2h-2z M56,46h2v2h-2z M58,46h2v2h-2z M64,46h2v2h-2z M68,46h2v2h-2z M74,46h2v2h-2z M4,48h2v2h-2z M6,48h2v2h-2z M8,48h2v2h-2z M12,48h2v2h-2z M16,48h2v2h-2z M18,48h2v2h-2z M20,48h2v2h-2z M22,48h2v2h-2z M26,48h2v2h-2z M34,48h2v2h-2z M38,48h2v2h-2z M40,48h2v2h-2z M46,48h2v2h-2z M50,48h2v2h-2z M56,48h2v2h-2z M64,48h2v2h-2z M66,48h2v2h-2z M68,48h2v2h-2z M70,48h2v2h-2z M4,50h2v2h-2z M6,50h2v2h-2z M8,50h2v2h-2z M14,50h2v2h-2z M16,50h2v2h-2z M18,50h2v2h-2z M20,50h2v2h-2z M24,50h2v2h-2z M26,50h2v2h-2z M28,50h2v2h-2z M30,50h2v2h-2z M32,50h2v2h-2z M36,50h2v2h-2z M40,50h2v2h-2z M42,50h2v2h-2z M46,50h2v2h-2z M48,50h2v2h-2z M56,50h2v2h-2z M58,50h2v2h-2z M62,50h2v2h-2z M64,50h2v2h-2z M72,50h2v2h-2z M74,50h2v2h-2z M2,52h2v2h-2z M10,52h2v2h-2z M18,52h2v2h-2z M20,52h2v2h-2z M22,52h2v2h-2z M24,52h2v2h-2z M26,52h2v2h-2z M28,52h2v2h-2z M30,52h2v2h-2z M38,52h2v2h-2z M44,52h2v2h-2z M48,52h2v2h-2z M52,52h2v2h-2z M54,52h2v2h-2z M56,52h2v2h-2z M58,52h2v2h-2z M66,52h2v2h-2z M2,54h2v2h-2z M4,54h2v2h-2z M6,54h2v2h-2z M14,54h2v2h-2z M30,54h2v2h-2z M32,54h2v2h-2z M36,54h2v2h-2z M38,54h2v2h-2z M40,54h2v2h-2z M52,54h2v2h-2z M54,54h2v2h-2z M56,54h2v2h-2z M60,54h2v2h-2z M62,54h2v2h-2z M72,54h2v2h-2z M74,54h2v2h-2z M2,56h2v2h-2z M6,56h2v2h-2z M8,56h2v2h-2z M12,56h2v2h-2z M28,56h2v2h-2z M34,56h2v2h-2z M38,56h2v2h-2z M40,56h2v2h-2z M46,56h2v2h-2z M50,56h2v2h-2z M58,56h2v2h-2z M60,56h2v2h-2z M64,56h2v2h-2z M68,56h2v2h-2z M70,56h2v2h-2z M2,58h2v2h-2z M10,58h2v2h-2z M14,58h2v2h-2z M16,58h2v2h-2z M20,58h2v2h-2z M22,58h2v2h-2z M26,58h2v2h-2z M28,58h2v2h-2z M30,58h2v2h-2z M32,58h2v2h-2z M42,58h2v2h-2z M46,58h2v2h-2z M48,58h2v2h-2z M52,58h2v2h-2z M56,58h2v2h-2z M58,58h2v2h-2z M60,58h2v2h-2z M62,58h2v2h-2z M64,58h2v2h-2z M66,58h2v2h-2z M68,58h2v2h-2z M70,58h2v2h-2z M72,58h2v2h-2z M18,60h2v2h-2z M32,60h2v2h-2z M36,60h2v2h-2z M38,60h2v2h-2z M40,60h2v2h-2z M42,60h2v2h-2z M44,60h2v2h-2z M54,60h2v2h-2z M58,60h2v2h-2z M66,60h2v2h-2z M70,60h2v2h-2z M72,60h2v2h-2z M2,62h2v2h-2z M4,62h2v2h-2z M6,62h2v2h-2z M8,62h2v2h-2z M10,62h2v2h-2z M12,62h2v2h-2z M14,62h2v2h-2z M18,62h2v2h-2z M20,62h2v2h-2z M24,62h2v2h-2z M28,62h2v2h-2z M32,62h2v2h-2z M34,62h2v2h-2z M36,62h2v2h-2z M38,62h2v2h-2z M40,62h2v2h-2z M42,62h2v2h-2z M48,62h2v2h-2z M52,62h2v2h-2z M58,62h2v2h-2z M62,62h2v2h-2z M66,62h2v2h-2z M74,62h2v2h-2z M2,64h2v2h-2z M14,64h2v2h-2z M18,64h2v2h-2z M26,64h2v2h-2z M28,64h2v2h-2z M34,64h2v2h-2z M52,64h2v2h-2z M56,64h2v2h-2z M58,64h2v2h-2z M66,64h2v2h-2z M72,64h2v2h-2z M74,64h2v2h-2z M2,66h2v2h-2z M6,66h2v2h-2z M8,66h2v2h-2z M10,66h2v2h-2z M14,66h2v2h-2z M18,66h2v2h-2z M20,66h2v2h-2z M22,66h2v2h-2z M26,66h2v2h-2z M28,66h2v2h-2z M32,66h2v2h-2z M34,66h2v2h-2z M38,66h2v2h-2z M42,66h2v2h-2z M50,66h2v2h-2z M54,66h2v2h-2z M56,66h2v2h-2z M58,66h2v2h-2z M60,66h2v2h-2z M62,66h2v2h-2z M64,66h2v2h-2z M66,66h2v2h-2z M2,68h2v2h-2z M6,68h2v2h-2z M8,68h2v2h-2z M10,68h2v2h-2z M14,68h2v2h-2z M18,68h2v2h-2z M20,68h2v2h-2z M22,68h2v2h-2z M24,68h2v2h-2z M28,68h2v2h-2z M40,68h2v2h-2z M48,68h2v2h-2z M54,68h2v2h-2z M62,68h2v2h-2z M74,68h2v2h-2z M2,70h2v2h-2z M6,70h2v2h-2z M8,70h2v2h-2z M10,70h2v2h-2z M14,70h2v2h-2z M20,70h2v2h-2z M24,70h2v2h-2z M26,70h2v2h-2z M28,70h2v2h-2z M36,70h2v2h-2z M38,70h2v2h-2z M44,70h2v2h-2z M46,70h2v2h-2z M48,70h2v2h-2z M52,70h2v2h-2z M54,70h2v2h-2z M58,70h2v2h-2z M60,70h2v2h-2z M66,70h2v2h-2z M68,70h2v2h-2z M74,70h2v2h-2z M2,72h2v2h-2z M14,72h2v2h-2z M20,72h2v2h-2z M28,72h2v2h-2z M32,72h2v2h-2z M36,72h2v2h-2z M40,72h2v2h-2z M46,72h2v2h-2z M48,72h2v2h-2z M54,72h2v2h-2z M66,72h2v2h-2z M70,72h2v2h-2z M72,72h2v2h-2z M74,72h2v2h-2z M2,74h2v2h-2z M4,74h2v2h-2z M6,74h2v2h-2z M8,74h2v2h-2z M10,74h2v2h-2z M12,74h2v2h-2z M14,74h2v2h-2z M18,74h2v2h-2z M20,74h2v2h-2z M22,74h2v2h-2z M28,74h2v2h-2z M30,74h2v2h-2z M40,74h2v2h-2z M42,74h2v2h-2z M46,74h2v2h-2z M50,74h2v2h-2z M58,74h2v2h-2z M62,74h2v2h-2z M64,74h2v2h-2z M68,74h2v2h-2z M74,74h2v2h-2z"/>
+    <text x="39" y="86" text-anchor="middle" fill="#94A3B8" font-size="5">Scan → GitHub</text>
+  </g>
+
+</svg>
