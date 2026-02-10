@@ -103,9 +103,9 @@
   <line x1="430" y1="330" x2="470" y2="330" stroke="#D97706" stroke-width="2"/>
   <line x1="470" y1="330" x2="470" y2="268" stroke="#D97706" stroke-width="2"/>
 
-  <!-- QS1 bypass (Pair 1: GRID ↔ GEN) -->
+  <!-- QS2 bypass (Pair 1: GRID ↔ GEN) -->
   <rect x="448" y="222" width="48" height="42" rx="5" fill="#FEF2F2" stroke="#F87171" stroke-width="1.5"/>
-  <text x="472" y="240" text-anchor="middle" fill="#991B1B" font-size="10" font-weight="700">QS1</text>
+  <text x="472" y="240" text-anchor="middle" fill="#991B1B" font-size="10" font-weight="700">QS2</text>
   <text x="472" y="255" text-anchor="middle" fill="#B91C1C" font-size="8">1-0-2</text>
 
   <!-- ===================== BUS A ===================== -->
@@ -155,9 +155,9 @@
   <line x1="840" y1="330" x2="875" y2="330" stroke="#7C3AED" stroke-width="2"/>
   <line x1="875" y1="330" x2="875" y2="268" stroke="#7C3AED" stroke-width="2"/>
 
-  <!-- QS2 bypass (Pair 2: ШИНА A ↔ INV) -->
+  <!-- QS1 bypass (Pair 2: ШИНА A ↔ INV) -->
   <rect x="853" y="222" width="48" height="42" rx="5" fill="#FEF2F2" stroke="#F87171" stroke-width="1.5"/>
-  <text x="877" y="240" text-anchor="middle" fill="#991B1B" font-size="10" font-weight="700">QS2</text>
+  <text x="877" y="240" text-anchor="middle" fill="#991B1B" font-size="10" font-weight="700">QS1</text>
   <text x="877" y="255" text-anchor="middle" fill="#B91C1C" font-size="8">1-0-2</text>
 
   <!-- Merge → QF5 -->
@@ -452,42 +452,43 @@
   <text x="1576" y="770" text-anchor="end" fill="#991B1B" font-size="9" font-weight="700">⚠️ ВЫКЛЮЧИТЬ КОНТРОЛЛЕР!</text>
 
   <!-- QS descriptions -->
-  <text x="1118" y="788" fill="#334155" font-size="9">QS1 (Ступ.1): <tspan fill="#2563EB" font-weight="700">↑ GRID</tspan> | 0 | <tspan fill="#D97706" font-weight="700">↓ GEN</tspan></text>
-  <text x="1370" y="788" fill="#334155" font-size="9">QS2 (Ступ.2): <tspan fill="#7C3AED" font-weight="700">↑ INV</tspan> | 0 | <tspan fill="#B45309" font-weight="700">↓ ШИНА A</tspan></text>
+  <text x="1118" y="788" fill="#334155" font-size="9">QS1 (Ступ.2): <tspan fill="#7C3AED" font-weight="700">↑ INV</tspan> | 0 | <tspan fill="#B45309" font-weight="700">↓ ШИНА A</tspan></text>
+  <text x="1370" y="788" fill="#334155" font-size="9">QS2 (Ступ.1): <tspan fill="#2563EB" font-weight="700">↑ GRID</tspan> | 0 | <tspan fill="#D97706" font-weight="700">↓ GEN</tspan></text>
 
   <!-- Table header -->
   <rect x="1108" y="796" width="472" height="14" rx="2" fill="#E2E8F0"/>
   <text x="1118" y="806" fill="#475569" font-size="8" font-weight="600">Режим</text>
   <text x="1250" y="806" fill="#475569" font-size="8" font-weight="600">QS1</text>
   <text x="1290" y="806" fill="#475569" font-size="8" font-weight="600">QS2</text>
+  <!-- QS1=INV/ШИНА A, QS2=GRID/GEN -->
   <text x="1330" y="806" fill="#475569" font-size="8" font-weight="600">Путь питания</text>
 
-  <!-- Row 1: GRID → дом -->
+  <!-- Row 1: GRID → дом (QS1=↓ ШИНА A, QS2=↑ GRID) -->
   <rect x="1108" y="812" width="472" height="13" fill="#EFF6FF"/>
   <text x="1118" y="822" fill="#2563EB" font-size="9" font-weight="600">GRID → дом</text>
-  <text x="1256" y="822" fill="#2563EB" font-size="9" font-weight="700">↑</text>
-  <text x="1296" y="822" fill="#B45309" font-size="9" font-weight="700">↓</text>
+  <text x="1256" y="822" fill="#B45309" font-size="9" font-weight="700">↓</text>
+  <text x="1296" y="822" fill="#2563EB" font-size="9" font-weight="700">↑</text>
   <text x="1330" y="822" fill="#64748B" font-size="8">GRID → ШИНА A → LOAD + заряд INV</text>
 
-  <!-- Row 2: GEN → дом -->
+  <!-- Row 2: GEN → дом (QS1=↓ ШИНА A, QS2=↓ GEN) -->
   <rect x="1108" y="825" width="472" height="13" fill="#FFFBEB"/>
   <text x="1118" y="835" fill="#D97706" font-size="9" font-weight="600">GEN → дом</text>
-  <text x="1256" y="835" fill="#D97706" font-size="9" font-weight="700">↓</text>
-  <text x="1296" y="835" fill="#B45309" font-size="9" font-weight="700">↓</text>
+  <text x="1256" y="835" fill="#B45309" font-size="9" font-weight="700">↓</text>
+  <text x="1296" y="835" fill="#D97706" font-size="9" font-weight="700">↓</text>
   <text x="1330" y="835" fill="#64748B" font-size="8">GEN → ШИНА A → LOAD + заряд INV</text>
 
-  <!-- Row 3: INV + GRID charge -->
+  <!-- Row 3: INV + GRID charge (QS1=↑ INV, QS2=↑ GRID) -->
   <rect x="1108" y="838" width="472" height="13" fill="#F5F3FF"/>
   <text x="1118" y="848" fill="#7C3AED" font-size="9" font-weight="600">INV + город заряд</text>
-  <text x="1256" y="848" fill="#2563EB" font-size="9" font-weight="700">↑</text>
-  <text x="1296" y="848" fill="#7C3AED" font-size="9" font-weight="700">↑</text>
+  <text x="1256" y="848" fill="#7C3AED" font-size="9" font-weight="700">↑</text>
+  <text x="1296" y="848" fill="#2563EB" font-size="9" font-weight="700">↑</text>
   <text x="1330" y="848" fill="#64748B" font-size="8">INV → LOAD, GRID → заряд АКБ</text>
 
-  <!-- Row 4: INV + GEN charge -->
+  <!-- Row 4: INV + GEN charge (QS1=↑ INV, QS2=↓ GEN) -->
   <rect x="1108" y="851" width="472" height="13" fill="#FFF7ED"/>
   <text x="1118" y="861" fill="#7C3AED" font-size="9" font-weight="600">INV + ген заряд</text>
-  <text x="1256" y="861" fill="#D97706" font-size="9" font-weight="700">↓</text>
-  <text x="1296" y="861" fill="#7C3AED" font-size="9" font-weight="700">↑</text>
+  <text x="1256" y="861" fill="#7C3AED" font-size="9" font-weight="700">↑</text>
+  <text x="1296" y="861" fill="#D97706" font-size="9" font-weight="700">↓</text>
   <text x="1330" y="861" fill="#64748B" font-size="8">INV → LOAD, GEN → заряд АКБ</text>
 
   <!-- ============================================================ -->
