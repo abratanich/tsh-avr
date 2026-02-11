@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="214mm" height="301mm" viewBox="0 0 214 301"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Bleed area -->
+  <rect x="0" y="0" width="214" height="301" fill="white"/>
+
+  <!-- Original labels content, offset by bleed -->
+  <g id="content" transform="translate(2, 2)">
+    
+  <!-- TSH-AVR Panel Labels — Standard DIN rail marker window sizes -->
+  <!-- 4P device window: ~45 x 8mm | QS window: ~45 x 10mm -->
+  <!-- Print at 100% scale on A4 self-adhesive paper -->
+  <defs>
+    <style>
+      .id { font-family: Arial, sans-serif; font-weight: 800; }
+      .desc { font-family: Arial, sans-serif; font-weight: 600; }
+      .sub { font-family: Arial, sans-serif; font-weight: 400; }
+      .cut { stroke: #bbb; stroke-width: 0.15; stroke-dasharray: 0.8,0.8; fill: none; }
+      .hdr { font-family: Arial, sans-serif; font-weight: 700; font-size: 3.5px; fill: #64748B; }
+      .info { font-family: Arial, sans-serif; font-weight: 400; font-size: 2.5px; fill: #94A3B8; }
+    </style>
+  </defs>
+
+  <!-- Page header -->
+  <text x="105" y="8" text-anchor="middle" font-family="Arial" font-weight="700" font-size="5" fill="#334155">TSH-AVR — НАКЛЕЙКИ ДЛЯ ЩИТА</text>
+  <text x="105" y="12" text-anchor="middle" class="info">Размер под стандартные окошки DIN-модулей (4P = 45x8мм). Печать 100%. Вырезать по пунктиру.</text>
+
+  <!-- ============================================================ -->
+  <!-- АВТОМАТЫ QF1-QF5  |  45 x 8mm each -->
+  <!-- ============================================================ -->
+  <text x="10" y="20" class="hdr">АВТОМАТЫ (QF1—QF5) · 45 x 8 мм</text>
+
+  <!-- QF1 — Выход INV -->
+  <g transform="translate(10, 23)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#5B21B6">QF1</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#5B21B6">Выход INV</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#7C3AED">инвертор → KM_INV</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#7C3AED"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2.2" font-weight="700">INV</text>
+  </g>
+
+  <!-- QF2 — Зарядка АКБ -->
+  <g transform="translate(10, 33)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#ECFDF5" stroke="#059669" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#065F46">QF2</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#065F46">Заряд АКБ</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#059669">ШИНА A → зарядное</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#059669"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="1.8" font-weight="700">BUS A</text>
+  </g>
+
+  <!-- QF3 — Ввод GRID -->
+  <g transform="translate(10, 43)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#EFF6FF" stroke="#2563EB" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#1E40AF">QF3</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#1E40AF">Ввод GRID</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#2563EB">городская сеть 230В</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#2563EB"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GRID</text>
+  </g>
+
+  <!-- QF4 — Ввод GEN -->
+  <g transform="translate(10, 53)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#FFFBEB" stroke="#D97706" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#92400E">QF4</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#92400E">Ввод GEN</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#D97706">генератор 230В</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#D97706"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GEN</text>
+  </g>
+
+  <!-- QF5 — Выход LOAD -->
+  <g transform="translate(10, 63)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#991B1B">QF5</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#991B1B">Выход LOAD</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#DC2626">питание дома</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#DC2626"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">LOAD</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- КОНТАКТОРЫ KM  |  45 x 8mm each -->
+  <!-- ============================================================ -->
+  <text x="10" y="78" class="hdr">КОНТАКТОРЫ (KM) · 45 x 8 мм</text>
+
+  <!-- KM_GRID -->
+  <g transform="translate(10, 81)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#DBEAFE" stroke="#2563EB" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#1E40AF">KM_GRID</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#2563EB">CH1 GPIO1 · Ступ.1</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#2563EB"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GRID</text>
+  </g>
+
+  <!-- KM_GEN -->
+  <g transform="translate(10, 91)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#FFFBEB" stroke="#D97706" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#92400E">KM_GEN</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#D97706">CH3 GPIO41 · Ступ.1</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#D97706"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GEN</text>
+  </g>
+
+  <!-- KM_INV -->
+  <g transform="translate(10, 101)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#5B21B6">KM_INV</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#7C3AED">CH2 GPIO2 · Ступ.2</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#7C3AED"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">INV</text>
+  </g>
+
+  <!-- KM_TIRE_A -->
+  <g transform="translate(10, 111)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#ECFDF5" stroke="#059669" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#065F46">KM_TIRE_A</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#059669">CH6 GPIO46 · Ступ.2</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#059669"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="1.8" font-weight="700">BUS A</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- QS ПЕРЕКЛЮЧАТЕЛИ  |  45 x 10mm each -->
+  <!-- ============================================================ -->
+  <text x="10" y="127" class="hdr">ПЕРЕКЛЮЧАТЕЛИ БАЙПАС (QS) · 45 x 10 мм</text>
+
+  <!-- QS1 — INV / ШИНА A -->
+  <g transform="translate(10, 130)">
+    <rect x="0" y="0" width="45" height="10" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="9.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.4"/>
+    <text x="2" y="3.5" class="id" font-size="3.2" fill="#991B1B">QS1</text>
+    <text x="12" y="3.5" class="desc" font-size="2.2" fill="#991B1B">Байпас Ступ.2</text>
+    <!-- Position badges -->
+    <rect x="2" y="5" width="12" height="3.5" rx="0.5" fill="#7C3AED"/>
+    <text x="8" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">↑ INV</text>
+    <rect x="15.5" y="5" width="6" height="3.5" rx="0.5" fill="#94A3B8"/>
+    <text x="18.5" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">0</text>
+    <rect x="23" y="5" width="14" height="3.5" rx="0.5" fill="#B45309"/>
+    <text x="30" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="1.8" font-weight="700">↓ ШИНА A</text>
+  </g>
+
+  <!-- QS2 — GRID / GEN -->
+  <g transform="translate(10, 142)">
+    <rect x="0" y="0" width="45" height="10" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="9.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.4"/>
+    <text x="2" y="3.5" class="id" font-size="3.2" fill="#991B1B">QS2</text>
+    <text x="12" y="3.5" class="desc" font-size="2.2" fill="#991B1B">Байпас Ступ.1</text>
+    <!-- Position badges -->
+    <rect x="2" y="5" width="12" height="3.5" rx="0.5" fill="#2563EB"/>
+    <text x="8" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">↑ GRID</text>
+    <rect x="15.5" y="5" width="6" height="3.5" rx="0.5" fill="#94A3B8"/>
+    <text x="18.5" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">0</text>
+    <rect x="23" y="5" width="12" height="3.5" rx="0.5" fill="#D97706"/>
+    <text x="29" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">↓ GEN</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ШИНА A + ESP32  |  special sizes -->
+  <!-- ============================================================ -->
+  <text x="10" y="160" class="hdr">ШИНЫ + КОНТРОЛЛЕР</text>
+
+  <!-- ШИНА A — 50 x 8mm -->
+  <g transform="translate(10, 163)">
+    <rect x="0" y="0" width="50" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="49.4" height="7.4" rx="0.3" fill="#FEF3C7" stroke="#B45309" stroke-width="0.4"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#78350F">ШИНА A</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#92400E">объединённый выход Ступ.1</text>
+    <rect x="38" y="1.5" width="10" height="5" rx="0.8" fill="#B45309"/>
+    <text x="43" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">BUS A</text>
+  </g>
+
+  <!-- ВЫХОДНАЯ ШИНА (LOAD) — 50 x 8mm -->
+  <g transform="translate(10, 173)">
+    <rect x="0" y="0" width="50" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="49.4" height="7.4" rx="0.3" fill="#EFF6FF" stroke="#2563EB" stroke-width="0.4"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#1E40AF">ВЫХОД</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#2563EB">выходная шина → потребители</text>
+    <rect x="38" y="1.5" width="10" height="5" rx="0.8" fill="#DC2626"/>
+    <text x="43" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">LOAD</text>
+  </g>
+
+  <!-- ESP32-S3 — 50 x 8mm -->
+  <g transform="translate(10, 183)">
+    <rect x="0" y="0" width="50" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="49.4" height="7.4" rx="0.3" fill="#0F172A" stroke="#334155" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#93C5FD">ESP32-S3</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#64748B">Waveshare 6CH · ESPHome</text>
+    <rect x="38" y="1.5" width="10" height="5" rx="0.8" fill="#1E3A5F"/>
+    <text x="43" y="4.8" text-anchor="middle" fill="#60A5FA" font-family="Arial" font-size="2" font-weight="700">TSH-AVR</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ПРЕДУПРЕЖДЕНИЕ — 50 x 10mm -->
+  <!-- ============================================================ -->
+  <text x="10" y="199" class="hdr">ПРЕДУПРЕЖДЕНИЕ</text>
+
+  <g transform="translate(10, 202)">
+    <rect x="0" y="0" width="50" height="10" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="49.4" height="9.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.5"/>
+    <text x="25" y="4" text-anchor="middle" class="id" font-size="3" fill="#DC2626">⚠️ ВНИМАНИЕ</text>
+    <text x="25" y="7" text-anchor="middle" class="desc" font-size="2.2" fill="#991B1B">QS переключать ТОЛЬКО при</text>
+    <text x="25" y="9.5" text-anchor="middle" class="desc" font-size="2.2" fill="#991B1B">ВЫКЛЮЧЕННОМ контроллере!</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ЗАПАСНОЙ КОМПЛЕКТ (2-й экземпляр) -->
+  <!-- ============================================================ -->
+  <text x="80" y="20" class="hdr">ЗАПАСНОЙ КОМПЛЕКТ — АВТОМАТЫ</text>
+
+  <!-- QF1 dup -->
+  <g transform="translate(80, 23)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#5B21B6">QF1</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#5B21B6">Выход INV</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#7C3AED">инвертор → KM_INV</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#7C3AED"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2.2" font-weight="700">INV</text>
+  </g>
+
+  <!-- QF2 dup -->
+  <g transform="translate(80, 33)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#ECFDF5" stroke="#059669" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#065F46">QF2</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#065F46">Заряд АКБ</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#059669">ШИНА A → зарядное</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#059669"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="1.8" font-weight="700">BUS A</text>
+  </g>
+
+  <!-- QF3 dup -->
+  <g transform="translate(80, 43)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#EFF6FF" stroke="#2563EB" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#1E40AF">QF3</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#1E40AF">Ввод GRID</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#2563EB">городская сеть 230В</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#2563EB"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GRID</text>
+  </g>
+
+  <!-- QF4 dup -->
+  <g transform="translate(80, 53)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#FFFBEB" stroke="#D97706" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#92400E">QF4</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#92400E">Ввод GEN</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#D97706">генератор 230В</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#D97706"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GEN</text>
+  </g>
+
+  <!-- QF5 dup -->
+  <g transform="translate(80, 63)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.3"/>
+    <text x="2" y="4" class="id" font-size="3.5" fill="#991B1B">QF5</text>
+    <text x="12" y="3.5" class="desc" font-size="2.5" fill="#991B1B">Выход LOAD</text>
+    <text x="12" y="6.5" class="sub" font-size="2" fill="#DC2626">питание дома</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#DC2626"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">LOAD</text>
+  </g>
+
+  <!-- ЗАПАСНОЙ КОМПЛЕКТ — КОНТАКТОРЫ -->
+  <text x="80" y="78" class="hdr">ЗАПАСНОЙ КОМПЛЕКТ — КОНТАКТОРЫ</text>
+
+  <!-- KM_GRID dup -->
+  <g transform="translate(80, 81)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#DBEAFE" stroke="#2563EB" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#1E40AF">KM_GRID</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#2563EB">CH1 GPIO1 · Ступ.1</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#2563EB"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GRID</text>
+  </g>
+
+  <!-- KM_GEN dup -->
+  <g transform="translate(80, 91)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#FFFBEB" stroke="#D97706" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#92400E">KM_GEN</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#D97706">CH3 GPIO41 · Ступ.1</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#D97706"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">GEN</text>
+  </g>
+
+  <!-- KM_INV dup -->
+  <g transform="translate(80, 101)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#5B21B6">KM_INV</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#7C3AED">CH2 GPIO2 · Ступ.2</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#7C3AED"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">INV</text>
+  </g>
+
+  <!-- KM_TIRE_A dup -->
+  <g transform="translate(80, 111)">
+    <rect x="0" y="0" width="45" height="8" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="7.4" rx="0.3" fill="#ECFDF5" stroke="#059669" stroke-width="0.3"/>
+    <text x="2" y="3.8" class="id" font-size="3" fill="#065F46">KM_TIRE_A</text>
+    <text x="2" y="6.8" class="sub" font-size="2" fill="#059669">CH6 GPIO46 · Ступ.2</text>
+    <rect x="35" y="1.5" width="8" height="5" rx="0.8" fill="#059669"/>
+    <text x="39" y="4.8" text-anchor="middle" fill="white" font-family="Arial" font-size="1.8" font-weight="700">BUS A</text>
+  </g>
+
+  <!-- ЗАПАСНОЙ — QS -->
+  <text x="80" y="127" class="hdr">ЗАПАСНОЙ КОМПЛЕКТ — QS</text>
+
+  <!-- QS1 dup -->
+  <g transform="translate(80, 130)">
+    <rect x="0" y="0" width="45" height="10" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="9.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.4"/>
+    <text x="2" y="3.5" class="id" font-size="3.2" fill="#991B1B">QS1</text>
+    <text x="12" y="3.5" class="desc" font-size="2.2" fill="#991B1B">Байпас Ступ.2</text>
+    <rect x="2" y="5" width="12" height="3.5" rx="0.5" fill="#7C3AED"/>
+    <text x="8" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">↑ INV</text>
+    <rect x="15.5" y="5" width="6" height="3.5" rx="0.5" fill="#94A3B8"/>
+    <text x="18.5" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">0</text>
+    <rect x="23" y="5" width="14" height="3.5" rx="0.5" fill="#B45309"/>
+    <text x="30" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="1.8" font-weight="700">↓ ШИНА A</text>
+  </g>
+
+  <!-- QS2 dup -->
+  <g transform="translate(80, 142)">
+    <rect x="0" y="0" width="45" height="10" rx="0.5" class="cut"/>
+    <rect x="0.3" y="0.3" width="44.4" height="9.4" rx="0.3" fill="#FEF2F2" stroke="#DC2626" stroke-width="0.4"/>
+    <text x="2" y="3.5" class="id" font-size="3.2" fill="#991B1B">QS2</text>
+    <text x="12" y="3.5" class="desc" font-size="2.2" fill="#991B1B">Байпас Ступ.1</text>
+    <rect x="2" y="5" width="12" height="3.5" rx="0.5" fill="#2563EB"/>
+    <text x="8" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">↑ GRID</text>
+    <rect x="15.5" y="5" width="6" height="3.5" rx="0.5" fill="#94A3B8"/>
+    <text x="18.5" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">0</text>
+    <rect x="23" y="5" width="12" height="3.5" rx="0.5" fill="#D97706"/>
+    <text x="29" y="7.3" text-anchor="middle" fill="white" font-family="Arial" font-size="2" font-weight="700">↓ GEN</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="105" y="294" text-anchor="middle" class="info">TSH-AVR · github.com/abratanich/tsh-avr · Печать 100% масштаб на самоклеящейся A4</text>
+
+
+    <!-- QR Code Section (added) -->
+    <g id="qr-section">
+      <text x="170.0" y="217"
+            font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="3.5"
+            fill="#64748B" text-anchor="middle">QR — СХЕМА</text>
+      <rect x="154" y="219"
+            width="32" height="32"
+            fill="white" stroke="#333" stroke-width="0.3" rx="1"/>
+    </g>
+  </g>
+
+  <!-- QR code paths (in absolute coordinates because of bleed offset) -->
+  <path d="M157.00,222.00h0.81v0.81h-0.81zM157.81,222.00h0.81v0.81h-0.81zM158.62,222.00h0.81v0.81h-0.81zM159.43,222.00h0.81v0.81h-0.81zM160.24,222.00h0.81v0.81h-0.81zM161.05,222.00h0.81v0.81h-0.81zM161.86,222.00h0.81v0.81h-0.81zM163.49,222.00h0.81v0.81h-0.81zM167.54,222.00h0.81v0.81h-0.81zM169.97,222.00h0.81v0.81h-0.81zM172.41,222.00h0.81v0.81h-0.81zM173.22,222.00h0.81v0.81h-0.81zM174.84,222.00h0.81v0.81h-0.81zM176.46,222.00h0.81v0.81h-0.81zM181.32,222.00h0.81v0.81h-0.81zM182.14,222.00h0.81v0.81h-0.81zM182.95,222.00h0.81v0.81h-0.81zM183.76,222.00h0.81v0.81h-0.81zM184.57,222.00h0.81v0.81h-0.81zM185.38,222.00h0.81v0.81h-0.81zM186.19,222.00h0.81v0.81h-0.81zM157.00,222.81h0.81v0.81h-0.81zM161.86,222.81h0.81v0.81h-0.81zM163.49,222.81h0.81v0.81h-0.81zM165.11,222.81h0.81v0.81h-0.81zM165.92,222.81h0.81v0.81h-0.81zM167.54,222.81h0.81v0.81h-0.81zM170.78,222.81h0.81v0.81h-0.81zM172.41,222.81h0.81v0.81h-0.81zM174.03,222.81h0.81v0.81h-0.81zM174.84,222.81h0.81v0.81h-0.81zM177.27,222.81h0.81v0.81h-0.81zM178.08,222.81h0.81v0.81h-0.81zM179.70,222.81h0.81v0.81h-0.81zM181.32,222.81h0.81v0.81h-0.81zM186.19,222.81h0.81v0.81h-0.81zM157.00,223.62h0.81v0.81h-0.81zM158.62,223.62h0.81v0.81h-0.81zM159.43,223.62h0.81v0.81h-0.81zM160.24,223.62h0.81v0.81h-0.81zM161.86,223.62h0.81v0.81h-0.81zM163.49,223.62h0.81v0.81h-0.81zM164.30,223.62h0.81v0.81h-0.81zM167.54,223.62h0.81v0.81h-0.81zM169.16,223.62h0.81v0.81h-0.81zM169.97,223.62h0.81v0.81h-0.81zM172.41,223.62h0.81v0.81h-0.81zM174.03,223.62h0.81v0.81h-0.81zM174.84,223.62h0.81v0.81h-0.81zM175.65,223.62h0.81v0.81h-0.81zM176.46,223.62h0.81v0.81h-0.81zM177.27,223.62h0.81v0.81h-0.81zM181.32,223.62h0.81v0.81h-0.81zM182.95,223.62h0.81v0.81h-0.81zM183.76,223.62h0.81v0.81h-0.81zM184.57,223.62h0.81v0.81h-0.81zM186.19,223.62h0.81v0.81h-0.81zM157.00,224.43h0.81v0.81h-0.81zM158.62,224.43h0.81v0.81h-0.81zM159.43,224.43h0.81v0.81h-0.81zM160.24,224.43h0.81v0.81h-0.81zM161.86,224.43h0.81v0.81h-0.81zM165.11,224.43h0.81v0.81h-0.81zM168.35,224.43h0.81v0.81h-0.81zM169.97,224.43h0.81v0.81h-0.81zM170.78,224.43h0.81v0.81h-0.81zM173.22,224.43h0.81v0.81h-0.81zM174.03,224.43h0.81v0.81h-0.81zM176.46,224.43h0.81v0.81h-0.81zM177.27,224.43h0.81v0.81h-0.81zM178.89,224.43h0.81v0.81h-0.81zM179.70,224.43h0.81v0.81h-0.81zM181.32,224.43h0.81v0.81h-0.81zM182.95,224.43h0.81v0.81h-0.81zM183.76,224.43h0.81v0.81h-0.81zM184.57,224.43h0.81v0.81h-0.81zM186.19,224.43h0.81v0.81h-0.81zM157.00,225.24h0.81v0.81h-0.81zM158.62,225.24h0.81v0.81h-0.81zM159.43,225.24h0.81v0.81h-0.81zM160.24,225.24h0.81v0.81h-0.81zM161.86,225.24h0.81v0.81h-0.81zM163.49,225.24h0.81v0.81h-0.81zM166.73,225.24h0.81v0.81h-0.81zM167.54,225.24h0.81v0.81h-0.81zM171.59,225.24h0.81v0.81h-0.81zM172.41,225.24h0.81v0.81h-0.81zM173.22,225.24h0.81v0.81h-0.81zM174.84,225.24h0.81v0.81h-0.81zM179.70,225.24h0.81v0.81h-0.81zM181.32,225.24h0.81v0.81h-0.81zM182.95,225.24h0.81v0.81h-0.81zM183.76,225.24h0.81v0.81h-0.81zM184.57,225.24h0.81v0.81h-0.81zM186.19,225.24h0.81v0.81h-0.81zM157.00,226.05h0.81v0.81h-0.81zM161.86,226.05h0.81v0.81h-0.81zM166.73,226.05h0.81v0.81h-0.81zM167.54,226.05h0.81v0.81h-0.81zM173.22,226.05h0.81v0.81h-0.81zM175.65,226.05h0.81v0.81h-0.81zM177.27,226.05h0.81v0.81h-0.81zM179.70,226.05h0.81v0.81h-0.81zM181.32,226.05h0.81v0.81h-0.81zM186.19,226.05h0.81v0.81h-0.81zM157.00,226.86h0.81v0.81h-0.81zM157.81,226.86h0.81v0.81h-0.81zM158.62,226.86h0.81v0.81h-0.81zM159.43,226.86h0.81v0.81h-0.81zM160.24,226.86h0.81v0.81h-0.81zM161.05,226.86h0.81v0.81h-0.81zM161.86,226.86h0.81v0.81h-0.81zM163.49,226.86h0.81v0.81h-0.81zM165.11,226.86h0.81v0.81h-0.81zM166.73,226.86h0.81v0.81h-0.81zM168.35,226.86h0.81v0.81h-0.81zM169.97,226.86h0.81v0.81h-0.81zM171.59,226.86h0.81v0.81h-0.81zM173.22,226.86h0.81v0.81h-0.81zM174.84,226.86h0.81v0.81h-0.81zM176.46,226.86h0.81v0.81h-0.81zM178.08,226.86h0.81v0.81h-0.81zM179.70,226.86h0.81v0.81h-0.81zM181.32,226.86h0.81v0.81h-0.81zM182.14,226.86h0.81v0.81h-0.81zM182.95,226.86h0.81v0.81h-0.81zM183.76,226.86h0.81v0.81h-0.81zM184.57,226.86h0.81v0.81h-0.81zM185.38,226.86h0.81v0.81h-0.81zM186.19,226.86h0.81v0.81h-0.81zM164.30,227.68h0.81v0.81h-0.81zM165.11,227.68h0.81v0.81h-0.81zM168.35,227.68h0.81v0.81h-0.81zM169.97,227.68h0.81v0.81h-0.81zM170.78,227.68h0.81v0.81h-0.81zM171.59,227.68h0.81v0.81h-0.81zM172.41,227.68h0.81v0.81h-0.81zM174.84,227.68h0.81v0.81h-0.81zM175.65,227.68h0.81v0.81h-0.81zM177.27,227.68h0.81v0.81h-0.81zM179.70,227.68h0.81v0.81h-0.81zM157.00,228.49h0.81v0.81h-0.81zM159.43,228.49h0.81v0.81h-0.81zM160.24,228.49h0.81v0.81h-0.81zM161.05,228.49h0.81v0.81h-0.81zM161.86,228.49h0.81v0.81h-0.81zM162.68,228.49h0.81v0.81h-0.81zM163.49,228.49h0.81v0.81h-0.81zM164.30,228.49h0.81v0.81h-0.81zM165.92,228.49h0.81v0.81h-0.81zM175.65,228.49h0.81v0.81h-0.81zM176.46,228.49h0.81v0.81h-0.81zM178.08,228.49h0.81v0.81h-0.81zM178.89,228.49h0.81v0.81h-0.81zM179.70,228.49h0.81v0.81h-0.81zM180.51,228.49h0.81v0.81h-0.81zM182.95,228.49h0.81v0.81h-0.81zM184.57,228.49h0.81v0.81h-0.81zM185.38,228.49h0.81v0.81h-0.81zM186.19,228.49h0.81v0.81h-0.81zM157.00,229.30h0.81v0.81h-0.81zM157.81,229.30h0.81v0.81h-0.81zM159.43,229.30h0.81v0.81h-0.81zM160.24,229.30h0.81v0.81h-0.81zM161.05,229.30h0.81v0.81h-0.81zM162.68,229.30h0.81v0.81h-0.81zM165.11,229.30h0.81v0.81h-0.81zM169.97,229.30h0.81v0.81h-0.81zM171.59,229.30h0.81v0.81h-0.81zM175.65,229.30h0.81v0.81h-0.81zM178.08,229.30h0.81v0.81h-0.81zM178.89,229.30h0.81v0.81h-0.81zM179.70,229.30h0.81v0.81h-0.81zM180.51,229.30h0.81v0.81h-0.81zM182.14,229.30h0.81v0.81h-0.81zM182.95,229.30h0.81v0.81h-0.81zM183.76,229.30h0.81v0.81h-0.81zM185.38,229.30h0.81v0.81h-0.81zM157.81,230.11h0.81v0.81h-0.81zM159.43,230.11h0.81v0.81h-0.81zM160.24,230.11h0.81v0.81h-0.81zM161.05,230.11h0.81v0.81h-0.81zM161.86,230.11h0.81v0.81h-0.81zM163.49,230.11h0.81v0.81h-0.81zM166.73,230.11h0.81v0.81h-0.81zM167.54,230.11h0.81v0.81h-0.81zM169.16,230.11h0.81v0.81h-0.81zM169.97,230.11h0.81v0.81h-0.81zM170.78,230.11h0.81v0.81h-0.81zM171.59,230.11h0.81v0.81h-0.81zM172.41,230.11h0.81v0.81h-0.81zM173.22,230.11h0.81v0.81h-0.81zM174.03,230.11h0.81v0.81h-0.81zM174.84,230.11h0.81v0.81h-0.81zM175.65,230.11h0.81v0.81h-0.81zM178.89,230.11h0.81v0.81h-0.81zM180.51,230.11h0.81v0.81h-0.81zM181.32,230.11h0.81v0.81h-0.81zM184.57,230.11h0.81v0.81h-0.81zM186.19,230.11h0.81v0.81h-0.81zM157.00,230.92h0.81v0.81h-0.81zM159.43,230.92h0.81v0.81h-0.81zM161.05,230.92h0.81v0.81h-0.81zM163.49,230.92h0.81v0.81h-0.81zM165.11,230.92h0.81v0.81h-0.81zM167.54,230.92h0.81v0.81h-0.81zM168.35,230.92h0.81v0.81h-0.81zM169.97,230.92h0.81v0.81h-0.81zM170.78,230.92h0.81v0.81h-0.81zM172.41,230.92h0.81v0.81h-0.81zM173.22,230.92h0.81v0.81h-0.81zM174.84,230.92h0.81v0.81h-0.81zM175.65,230.92h0.81v0.81h-0.81zM176.46,230.92h0.81v0.81h-0.81zM178.08,230.92h0.81v0.81h-0.81zM178.89,230.92h0.81v0.81h-0.81zM180.51,230.92h0.81v0.81h-0.81zM182.14,230.92h0.81v0.81h-0.81zM183.76,230.92h0.81v0.81h-0.81zM184.57,230.92h0.81v0.81h-0.81zM185.38,230.92h0.81v0.81h-0.81zM186.19,230.92h0.81v0.81h-0.81zM157.00,231.73h0.81v0.81h-0.81zM158.62,231.73h0.81v0.81h-0.81zM159.43,231.73h0.81v0.81h-0.81zM160.24,231.73h0.81v0.81h-0.81zM161.05,231.73h0.81v0.81h-0.81zM161.86,231.73h0.81v0.81h-0.81zM165.92,231.73h0.81v0.81h-0.81zM166.73,231.73h0.81v0.81h-0.81zM167.54,231.73h0.81v0.81h-0.81zM169.16,231.73h0.81v0.81h-0.81zM169.97,231.73h0.81v0.81h-0.81zM173.22,231.73h0.81v0.81h-0.81zM176.46,231.73h0.81v0.81h-0.81zM181.32,231.73h0.81v0.81h-0.81zM186.19,231.73h0.81v0.81h-0.81zM157.00,232.54h0.81v0.81h-0.81zM160.24,232.54h0.81v0.81h-0.81zM162.68,232.54h0.81v0.81h-0.81zM163.49,232.54h0.81v0.81h-0.81zM164.30,232.54h0.81v0.81h-0.81zM167.54,232.54h0.81v0.81h-0.81zM169.16,232.54h0.81v0.81h-0.81zM169.97,232.54h0.81v0.81h-0.81zM171.59,232.54h0.81v0.81h-0.81zM175.65,232.54h0.81v0.81h-0.81zM177.27,232.54h0.81v0.81h-0.81zM178.08,232.54h0.81v0.81h-0.81zM178.89,232.54h0.81v0.81h-0.81zM179.70,232.54h0.81v0.81h-0.81zM182.95,232.54h0.81v0.81h-0.81zM183.76,232.54h0.81v0.81h-0.81zM157.81,233.35h0.81v0.81h-0.81zM158.62,233.35h0.81v0.81h-0.81zM159.43,233.35h0.81v0.81h-0.81zM160.24,233.35h0.81v0.81h-0.81zM161.05,233.35h0.81v0.81h-0.81zM161.86,233.35h0.81v0.81h-0.81zM163.49,233.35h0.81v0.81h-0.81zM164.30,233.35h0.81v0.81h-0.81zM165.11,233.35h0.81v0.81h-0.81zM165.92,233.35h0.81v0.81h-0.81zM168.35,233.35h0.81v0.81h-0.81zM169.16,233.35h0.81v0.81h-0.81zM169.97,233.35h0.81v0.81h-0.81zM171.59,233.35h0.81v0.81h-0.81zM172.41,233.35h0.81v0.81h-0.81zM173.22,233.35h0.81v0.81h-0.81zM178.89,233.35h0.81v0.81h-0.81zM181.32,233.35h0.81v0.81h-0.81zM182.95,233.35h0.81v0.81h-0.81zM183.76,233.35h0.81v0.81h-0.81zM184.57,233.35h0.81v0.81h-0.81zM186.19,233.35h0.81v0.81h-0.81zM157.00,234.16h0.81v0.81h-0.81zM157.81,234.16h0.81v0.81h-0.81zM158.62,234.16h0.81v0.81h-0.81zM159.43,234.16h0.81v0.81h-0.81zM162.68,234.16h0.81v0.81h-0.81zM164.30,234.16h0.81v0.81h-0.81zM165.92,234.16h0.81v0.81h-0.81zM166.73,234.16h0.81v0.81h-0.81zM169.16,234.16h0.81v0.81h-0.81zM172.41,234.16h0.81v0.81h-0.81zM174.84,234.16h0.81v0.81h-0.81zM175.65,234.16h0.81v0.81h-0.81zM176.46,234.16h0.81v0.81h-0.81zM179.70,234.16h0.81v0.81h-0.81zM182.14,234.16h0.81v0.81h-0.81zM183.76,234.16h0.81v0.81h-0.81zM184.57,234.16h0.81v0.81h-0.81zM186.19,234.16h0.81v0.81h-0.81zM157.00,234.97h0.81v0.81h-0.81zM157.81,234.97h0.81v0.81h-0.81zM158.62,234.97h0.81v0.81h-0.81zM159.43,234.97h0.81v0.81h-0.81zM160.24,234.97h0.81v0.81h-0.81zM161.05,234.97h0.81v0.81h-0.81zM161.86,234.97h0.81v0.81h-0.81zM162.68,234.97h0.81v0.81h-0.81zM163.49,234.97h0.81v0.81h-0.81zM164.30,234.97h0.81v0.81h-0.81zM165.11,234.97h0.81v0.81h-0.81zM165.92,234.97h0.81v0.81h-0.81zM167.54,234.97h0.81v0.81h-0.81zM170.78,234.97h0.81v0.81h-0.81zM171.59,234.97h0.81v0.81h-0.81zM172.41,234.97h0.81v0.81h-0.81zM173.22,234.97h0.81v0.81h-0.81zM175.65,234.97h0.81v0.81h-0.81zM176.46,234.97h0.81v0.81h-0.81zM177.27,234.97h0.81v0.81h-0.81zM180.51,234.97h0.81v0.81h-0.81zM181.32,234.97h0.81v0.81h-0.81zM182.14,234.97h0.81v0.81h-0.81zM184.57,234.97h0.81v0.81h-0.81zM185.38,234.97h0.81v0.81h-0.81zM157.00,235.78h0.81v0.81h-0.81zM157.81,235.78h0.81v0.81h-0.81zM162.68,235.78h0.81v0.81h-0.81zM163.49,235.78h0.81v0.81h-0.81zM165.92,235.78h0.81v0.81h-0.81zM166.73,235.78h0.81v0.81h-0.81zM167.54,235.78h0.81v0.81h-0.81zM170.78,235.78h0.81v0.81h-0.81zM178.89,235.78h0.81v0.81h-0.81zM180.51,235.78h0.81v0.81h-0.81zM182.14,235.78h0.81v0.81h-0.81zM183.76,235.78h0.81v0.81h-0.81zM184.57,235.78h0.81v0.81h-0.81zM157.00,236.59h0.81v0.81h-0.81zM157.81,236.59h0.81v0.81h-0.81zM158.62,236.59h0.81v0.81h-0.81zM159.43,236.59h0.81v0.81h-0.81zM161.86,236.59h0.81v0.81h-0.81zM162.68,236.59h0.81v0.81h-0.81zM163.49,236.59h0.81v0.81h-0.81zM165.11,236.59h0.81v0.81h-0.81zM167.54,236.59h0.81v0.81h-0.81zM168.35,236.59h0.81v0.81h-0.81zM169.97,236.59h0.81v0.81h-0.81zM171.59,236.59h0.81v0.81h-0.81zM172.41,236.59h0.81v0.81h-0.81zM174.03,236.59h0.81v0.81h-0.81zM175.65,236.59h0.81v0.81h-0.81zM176.46,236.59h0.81v0.81h-0.81zM178.08,236.59h0.81v0.81h-0.81zM178.89,236.59h0.81v0.81h-0.81zM180.51,236.59h0.81v0.81h-0.81zM181.32,236.59h0.81v0.81h-0.81zM182.95,236.59h0.81v0.81h-0.81zM183.76,236.59h0.81v0.81h-0.81zM184.57,236.59h0.81v0.81h-0.81zM186.19,236.59h0.81v0.81h-0.81zM158.62,237.41h0.81v0.81h-0.81zM159.43,237.41h0.81v0.81h-0.81zM162.68,237.41h0.81v0.81h-0.81zM164.30,237.41h0.81v0.81h-0.81zM167.54,237.41h0.81v0.81h-0.81zM168.35,237.41h0.81v0.81h-0.81zM169.16,237.41h0.81v0.81h-0.81zM169.97,237.41h0.81v0.81h-0.81zM171.59,237.41h0.81v0.81h-0.81zM174.84,237.41h0.81v0.81h-0.81zM177.27,237.41h0.81v0.81h-0.81zM178.08,237.41h0.81v0.81h-0.81zM180.51,237.41h0.81v0.81h-0.81zM181.32,237.41h0.81v0.81h-0.81zM182.14,237.41h0.81v0.81h-0.81zM182.95,237.41h0.81v0.81h-0.81zM183.76,237.41h0.81v0.81h-0.81zM186.19,237.41h0.81v0.81h-0.81zM157.00,238.22h0.81v0.81h-0.81zM157.81,238.22h0.81v0.81h-0.81zM159.43,238.22h0.81v0.81h-0.81zM160.24,238.22h0.81v0.81h-0.81zM161.05,238.22h0.81v0.81h-0.81zM161.86,238.22h0.81v0.81h-0.81zM164.30,238.22h0.81v0.81h-0.81zM167.54,238.22h0.81v0.81h-0.81zM168.35,238.22h0.81v0.81h-0.81zM169.97,238.22h0.81v0.81h-0.81zM170.78,238.22h0.81v0.81h-0.81zM172.41,238.22h0.81v0.81h-0.81zM176.46,238.22h0.81v0.81h-0.81zM178.08,238.22h0.81v0.81h-0.81zM179.70,238.22h0.81v0.81h-0.81zM180.51,238.22h0.81v0.81h-0.81zM181.32,238.22h0.81v0.81h-0.81zM182.14,238.22h0.81v0.81h-0.81zM182.95,238.22h0.81v0.81h-0.81zM157.00,239.03h0.81v0.81h-0.81zM157.81,239.03h0.81v0.81h-0.81zM158.62,239.03h0.81v0.81h-0.81zM160.24,239.03h0.81v0.81h-0.81zM162.68,239.03h0.81v0.81h-0.81zM163.49,239.03h0.81v0.81h-0.81zM165.11,239.03h0.81v0.81h-0.81zM169.16,239.03h0.81v0.81h-0.81zM170.78,239.03h0.81v0.81h-0.81zM172.41,239.03h0.81v0.81h-0.81zM174.84,239.03h0.81v0.81h-0.81zM175.65,239.03h0.81v0.81h-0.81zM177.27,239.03h0.81v0.81h-0.81zM178.89,239.03h0.81v0.81h-0.81zM180.51,239.03h0.81v0.81h-0.81zM182.95,239.03h0.81v0.81h-0.81zM184.57,239.03h0.81v0.81h-0.81zM157.00,239.84h0.81v0.81h-0.81zM157.81,239.84h0.81v0.81h-0.81zM158.62,239.84h0.81v0.81h-0.81zM159.43,239.84h0.81v0.81h-0.81zM161.86,239.84h0.81v0.81h-0.81zM162.68,239.84h0.81v0.81h-0.81zM169.16,239.84h0.81v0.81h-0.81zM169.97,239.84h0.81v0.81h-0.81zM175.65,239.84h0.81v0.81h-0.81zM176.46,239.84h0.81v0.81h-0.81zM178.08,239.84h0.81v0.81h-0.81zM178.89,239.84h0.81v0.81h-0.81zM179.70,239.84h0.81v0.81h-0.81zM182.14,239.84h0.81v0.81h-0.81zM183.76,239.84h0.81v0.81h-0.81zM186.19,239.84h0.81v0.81h-0.81zM157.81,240.65h0.81v0.81h-0.81zM158.62,240.65h0.81v0.81h-0.81zM159.43,240.65h0.81v0.81h-0.81zM161.05,240.65h0.81v0.81h-0.81zM162.68,240.65h0.81v0.81h-0.81zM163.49,240.65h0.81v0.81h-0.81zM164.30,240.65h0.81v0.81h-0.81zM165.11,240.65h0.81v0.81h-0.81zM166.73,240.65h0.81v0.81h-0.81zM169.97,240.65h0.81v0.81h-0.81zM171.59,240.65h0.81v0.81h-0.81zM172.41,240.65h0.81v0.81h-0.81zM174.84,240.65h0.81v0.81h-0.81zM176.46,240.65h0.81v0.81h-0.81zM178.89,240.65h0.81v0.81h-0.81zM182.14,240.65h0.81v0.81h-0.81zM182.95,240.65h0.81v0.81h-0.81zM183.76,240.65h0.81v0.81h-0.81zM184.57,240.65h0.81v0.81h-0.81zM157.81,241.46h0.81v0.81h-0.81zM158.62,241.46h0.81v0.81h-0.81zM159.43,241.46h0.81v0.81h-0.81zM161.86,241.46h0.81v0.81h-0.81zM162.68,241.46h0.81v0.81h-0.81zM163.49,241.46h0.81v0.81h-0.81zM164.30,241.46h0.81v0.81h-0.81zM165.92,241.46h0.81v0.81h-0.81zM166.73,241.46h0.81v0.81h-0.81zM167.54,241.46h0.81v0.81h-0.81zM168.35,241.46h0.81v0.81h-0.81zM169.16,241.46h0.81v0.81h-0.81zM170.78,241.46h0.81v0.81h-0.81zM172.41,241.46h0.81v0.81h-0.81zM173.22,241.46h0.81v0.81h-0.81zM174.84,241.46h0.81v0.81h-0.81zM175.65,241.46h0.81v0.81h-0.81zM178.89,241.46h0.81v0.81h-0.81zM179.70,241.46h0.81v0.81h-0.81zM181.32,241.46h0.81v0.81h-0.81zM182.14,241.46h0.81v0.81h-0.81zM185.38,241.46h0.81v0.81h-0.81zM186.19,241.46h0.81v0.81h-0.81zM157.00,242.27h0.81v0.81h-0.81zM160.24,242.27h0.81v0.81h-0.81zM163.49,242.27h0.81v0.81h-0.81zM164.30,242.27h0.81v0.81h-0.81zM165.11,242.27h0.81v0.81h-0.81zM165.92,242.27h0.81v0.81h-0.81zM166.73,242.27h0.81v0.81h-0.81zM167.54,242.27h0.81v0.81h-0.81zM168.35,242.27h0.81v0.81h-0.81zM171.59,242.27h0.81v0.81h-0.81zM174.03,242.27h0.81v0.81h-0.81zM175.65,242.27h0.81v0.81h-0.81zM177.27,242.27h0.81v0.81h-0.81zM178.08,242.27h0.81v0.81h-0.81zM178.89,242.27h0.81v0.81h-0.81zM179.70,242.27h0.81v0.81h-0.81zM182.95,242.27h0.81v0.81h-0.81zM157.00,243.08h0.81v0.81h-0.81zM157.81,243.08h0.81v0.81h-0.81zM158.62,243.08h0.81v0.81h-0.81zM161.86,243.08h0.81v0.81h-0.81zM168.35,243.08h0.81v0.81h-0.81zM169.16,243.08h0.81v0.81h-0.81zM170.78,243.08h0.81v0.81h-0.81zM171.59,243.08h0.81v0.81h-0.81zM172.41,243.08h0.81v0.81h-0.81zM177.27,243.08h0.81v0.81h-0.81zM178.08,243.08h0.81v0.81h-0.81zM178.89,243.08h0.81v0.81h-0.81zM180.51,243.08h0.81v0.81h-0.81zM181.32,243.08h0.81v0.81h-0.81zM185.38,243.08h0.81v0.81h-0.81zM186.19,243.08h0.81v0.81h-0.81zM157.00,243.89h0.81v0.81h-0.81zM158.62,243.89h0.81v0.81h-0.81zM159.43,243.89h0.81v0.81h-0.81zM161.05,243.89h0.81v0.81h-0.81zM167.54,243.89h0.81v0.81h-0.81zM169.97,243.89h0.81v0.81h-0.81zM171.59,243.89h0.81v0.81h-0.81zM172.41,243.89h0.81v0.81h-0.81zM174.84,243.89h0.81v0.81h-0.81zM176.46,243.89h0.81v0.81h-0.81zM179.70,243.89h0.81v0.81h-0.81zM180.51,243.89h0.81v0.81h-0.81zM182.14,243.89h0.81v0.81h-0.81zM183.76,243.89h0.81v0.81h-0.81zM184.57,243.89h0.81v0.81h-0.81zM157.00,244.70h0.81v0.81h-0.81zM160.24,244.70h0.81v0.81h-0.81zM161.86,244.70h0.81v0.81h-0.81zM162.68,244.70h0.81v0.81h-0.81zM164.30,244.70h0.81v0.81h-0.81zM165.11,244.70h0.81v0.81h-0.81zM166.73,244.70h0.81v0.81h-0.81zM167.54,244.70h0.81v0.81h-0.81zM168.35,244.70h0.81v0.81h-0.81zM169.16,244.70h0.81v0.81h-0.81zM173.22,244.70h0.81v0.81h-0.81zM174.84,244.70h0.81v0.81h-0.81zM175.65,244.70h0.81v0.81h-0.81zM177.27,244.70h0.81v0.81h-0.81zM178.89,244.70h0.81v0.81h-0.81zM179.70,244.70h0.81v0.81h-0.81zM180.51,244.70h0.81v0.81h-0.81zM181.32,244.70h0.81v0.81h-0.81zM182.14,244.70h0.81v0.81h-0.81zM182.95,244.70h0.81v0.81h-0.81zM183.76,244.70h0.81v0.81h-0.81zM184.57,244.70h0.81v0.81h-0.81zM185.38,244.70h0.81v0.81h-0.81zM163.49,245.51h0.81v0.81h-0.81zM169.16,245.51h0.81v0.81h-0.81zM170.78,245.51h0.81v0.81h-0.81zM171.59,245.51h0.81v0.81h-0.81zM172.41,245.51h0.81v0.81h-0.81zM173.22,245.51h0.81v0.81h-0.81zM174.03,245.51h0.81v0.81h-0.81zM178.08,245.51h0.81v0.81h-0.81zM179.70,245.51h0.81v0.81h-0.81zM182.95,245.51h0.81v0.81h-0.81zM184.57,245.51h0.81v0.81h-0.81zM185.38,245.51h0.81v0.81h-0.81zM157.00,246.32h0.81v0.81h-0.81zM157.81,246.32h0.81v0.81h-0.81zM158.62,246.32h0.81v0.81h-0.81zM159.43,246.32h0.81v0.81h-0.81zM160.24,246.32h0.81v0.81h-0.81zM161.05,246.32h0.81v0.81h-0.81zM161.86,246.32h0.81v0.81h-0.81zM163.49,246.32h0.81v0.81h-0.81zM164.30,246.32h0.81v0.81h-0.81zM165.92,246.32h0.81v0.81h-0.81zM167.54,246.32h0.81v0.81h-0.81zM169.16,246.32h0.81v0.81h-0.81zM169.97,246.32h0.81v0.81h-0.81zM170.78,246.32h0.81v0.81h-0.81zM171.59,246.32h0.81v0.81h-0.81zM172.41,246.32h0.81v0.81h-0.81zM173.22,246.32h0.81v0.81h-0.81zM175.65,246.32h0.81v0.81h-0.81zM177.27,246.32h0.81v0.81h-0.81zM179.70,246.32h0.81v0.81h-0.81zM181.32,246.32h0.81v0.81h-0.81zM182.95,246.32h0.81v0.81h-0.81zM186.19,246.32h0.81v0.81h-0.81zM157.00,247.14h0.81v0.81h-0.81zM161.86,247.14h0.81v0.81h-0.81zM163.49,247.14h0.81v0.81h-0.81zM166.73,247.14h0.81v0.81h-0.81zM167.54,247.14h0.81v0.81h-0.81zM169.97,247.14h0.81v0.81h-0.81zM177.27,247.14h0.81v0.81h-0.81zM178.89,247.14h0.81v0.81h-0.81zM179.70,247.14h0.81v0.81h-0.81zM182.95,247.14h0.81v0.81h-0.81zM185.38,247.14h0.81v0.81h-0.81zM186.19,247.14h0.81v0.81h-0.81zM157.00,247.95h0.81v0.81h-0.81zM158.62,247.95h0.81v0.81h-0.81zM159.43,247.95h0.81v0.81h-0.81zM160.24,247.95h0.81v0.81h-0.81zM161.86,247.95h0.81v0.81h-0.81zM163.49,247.95h0.81v0.81h-0.81zM164.30,247.95h0.81v0.81h-0.81zM165.11,247.95h0.81v0.81h-0.81zM166.73,247.95h0.81v0.81h-0.81zM167.54,247.95h0.81v0.81h-0.81zM169.16,247.95h0.81v0.81h-0.81zM169.97,247.95h0.81v0.81h-0.81zM171.59,247.95h0.81v0.81h-0.81zM173.22,247.95h0.81v0.81h-0.81zM176.46,247.95h0.81v0.81h-0.81zM178.08,247.95h0.81v0.81h-0.81zM178.89,247.95h0.81v0.81h-0.81zM179.70,247.95h0.81v0.81h-0.81zM180.51,247.95h0.81v0.81h-0.81zM181.32,247.95h0.81v0.81h-0.81zM182.14,247.95h0.81v0.81h-0.81zM182.95,247.95h0.81v0.81h-0.81zM157.00,248.76h0.81v0.81h-0.81zM158.62,248.76h0.81v0.81h-0.81zM159.43,248.76h0.81v0.81h-0.81zM160.24,248.76h0.81v0.81h-0.81zM161.86,248.76h0.81v0.81h-0.81zM163.49,248.76h0.81v0.81h-0.81zM164.30,248.76h0.81v0.81h-0.81zM165.11,248.76h0.81v0.81h-0.81zM165.92,248.76h0.81v0.81h-0.81zM167.54,248.76h0.81v0.81h-0.81zM172.41,248.76h0.81v0.81h-0.81zM175.65,248.76h0.81v0.81h-0.81zM178.08,248.76h0.81v0.81h-0.81zM181.32,248.76h0.81v0.81h-0.81zM186.19,248.76h0.81v0.81h-0.81zM157.00,249.57h0.81v0.81h-0.81zM158.62,249.57h0.81v0.81h-0.81zM159.43,249.57h0.81v0.81h-0.81zM160.24,249.57h0.81v0.81h-0.81zM161.86,249.57h0.81v0.81h-0.81zM164.30,249.57h0.81v0.81h-0.81zM165.92,249.57h0.81v0.81h-0.81zM166.73,249.57h0.81v0.81h-0.81zM167.54,249.57h0.81v0.81h-0.81zM170.78,249.57h0.81v0.81h-0.81zM171.59,249.57h0.81v0.81h-0.81zM174.03,249.57h0.81v0.81h-0.81zM174.84,249.57h0.81v0.81h-0.81zM175.65,249.57h0.81v0.81h-0.81zM177.27,249.57h0.81v0.81h-0.81zM178.08,249.57h0.81v0.81h-0.81zM179.70,249.57h0.81v0.81h-0.81zM180.51,249.57h0.81v0.81h-0.81zM182.95,249.57h0.81v0.81h-0.81zM183.76,249.57h0.81v0.81h-0.81zM186.19,249.57h0.81v0.81h-0.81zM157.00,250.38h0.81v0.81h-0.81zM161.86,250.38h0.81v0.81h-0.81zM164.30,250.38h0.81v0.81h-0.81zM167.54,250.38h0.81v0.81h-0.81zM169.16,250.38h0.81v0.81h-0.81zM170.78,250.38h0.81v0.81h-0.81zM172.41,250.38h0.81v0.81h-0.81zM174.84,250.38h0.81v0.81h-0.81zM175.65,250.38h0.81v0.81h-0.81zM178.08,250.38h0.81v0.81h-0.81zM182.95,250.38h0.81v0.81h-0.81zM184.57,250.38h0.81v0.81h-0.81zM185.38,250.38h0.81v0.81h-0.81zM186.19,250.38h0.81v0.81h-0.81zM157.00,251.19h0.81v0.81h-0.81zM157.81,251.19h0.81v0.81h-0.81zM158.62,251.19h0.81v0.81h-0.81zM159.43,251.19h0.81v0.81h-0.81zM160.24,251.19h0.81v0.81h-0.81zM161.05,251.19h0.81v0.81h-0.81zM161.86,251.19h0.81v0.81h-0.81zM163.49,251.19h0.81v0.81h-0.81zM164.30,251.19h0.81v0.81h-0.81zM165.11,251.19h0.81v0.81h-0.81zM167.54,251.19h0.81v0.81h-0.81zM168.35,251.19h0.81v0.81h-0.81zM172.41,251.19h0.81v0.81h-0.81zM173.22,251.19h0.81v0.81h-0.81zM174.84,251.19h0.81v0.81h-0.81zM176.46,251.19h0.81v0.81h-0.81zM179.70,251.19h0.81v0.81h-0.81zM181.32,251.19h0.81v0.81h-0.81zM182.14,251.19h0.81v0.81h-0.81zM183.76,251.19h0.81v0.81h-0.81zM186.19,251.19h0.81v0.81h-0.81z" fill="#000000" fill-rule="nonzero" stroke="none"/>
+
+  <!-- QR label text below code -->
+  <text x="172.0" y="256"
+        font-family="Courier New, monospace" font-weight="400" font-size="2"
+        fill="#666666" text-anchor="middle">Scan → schematic-v2.svg</text>
+
+  <!-- CUT CONTOUR LAYER -->
+  <g id="cut-contour" fill="none" stroke="#FF00FF" stroke-width="0.1">
+    <rect x="2" y="2" width="210" height="297"/>
+  </g>
+
+  <!-- TRIM MARKS LAYER -->
+  <g id="trim-marks" fill="none" stroke="#000000" stroke-width="0.15">
+    <path d="M1.50,2.00L-1.50,2.00M2.00,1.50L2.00,-1.50M212.50,2.00L215.50,2.00M212.00,1.50L212.00,-1.50M1.50,299.00L-1.50,299.00M2.00,299.50L2.00,302.50M212.50,299.00L215.50,299.00M212.00,299.50L212.00,302.50"/>
+  </g>
+
+</svg>
